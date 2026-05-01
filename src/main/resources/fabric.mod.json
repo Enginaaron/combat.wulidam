@@ -3,9 +3,9 @@
 	"id": "soulslikecombat",
 	"version": "${version}",
 	"name": "SoulsLikeCombat",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "This is a souls like combat mod made by Howard, Aaron, and Allan for ICS4U1",
 	"authors": [
-		"Me!"
+		"Howard, Aaron, Allan"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
@@ -20,6 +20,9 @@
 		],
 		"fabric-datagen": [
 			"combat.wulidam.SoulsLikeCombatDataGenerator"
+		],
+		"client": [
+			"combat.wulidam.SoulsLikeCombatClient"
 		]
 	},
 	"mixins": [
