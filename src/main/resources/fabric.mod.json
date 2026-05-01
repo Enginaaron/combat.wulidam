@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "soulslikecombat",
-	"version": "${version}",
+	"version": "1.0.0",
 	"name": "SoulsLikeCombat",
 	"description": "This is a souls like combat mod made by Howard, Aaron, and Allan for ICS4U1",
 	"authors": [
@@ -9,7 +9,7 @@
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/Enginaaron/combat.wulidam"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/soulslikecombat/icon.png",
