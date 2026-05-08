@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/handheld",
+    "textures": {
+        "layer0": "soulslikecombat:item/sword_and_shield"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "item.soulslikecombat.sword_and_shield": "Sword and Shield",
+    "item.soulslikecombat.dagger": "Dagger",
+    "item.soulslikecombat.scythe": "Scythe",
+    "item.soulslikecombat.longsword": "Longsword",
+
+    "tooltip.soulslikecombat.combat_stats": "⚔ Combat Stats",
+    "tooltip.soulslikecombat.damage": "  Damage: %s",
+    "tooltip.soulslikecombat.range": "  Range: %s blocks",
+    "tooltip.soulslikecombat.combo": "  Combo Chain: %s hits",
+    "tooltip.soulslikecombat.parry_window": "  Parry Window: %s ticks"
+}

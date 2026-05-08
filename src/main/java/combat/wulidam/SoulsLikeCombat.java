@@ -1,5 +1,8 @@
 package combat.wulidam;
 
+import combat.wulidam.combat.WeaponRegistry;
+import combat.wulidam.event.CombatTickHandler;
+import combat.wulidam.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -19,6 +22,17 @@ public class SoulsLikeCombat implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-		LOGGER.info("Hello Fabric world!");
+		LOGGER.info("Initializing SoulsLikeCombat...");
+
+		// Register custom weapon items and creative tab entries
+		ModItems.initialize();
+
+		// Register weapon data resource reload listener
+		WeaponRegistry.register();
+
+		// Register server tick handler for combat state machine
+		CombatTickHandler.register();
+
+		LOGGER.info("SoulsLikeCombat initialized successfully!");
 	}
 }

@@ -1,0 +1,25 @@
+{
+    "baseDamage": 5.0,
+    "attackRange": 3.0,
+    "windUpTicks": 5,
+    "activeTicks": 3,
+    "recoveryTicks": 10,
+    "parryWindowTicks": 10,
+    "parryStunTicks": 20,
+    "parryKnockback": 1.5,
+    "parryFailStunTicks": 8,
+    "parryCooldownTicks": 25,
+    "dodgeTicks": 8,
+    "dodgeIFrames": 6,
+    "dodgeDistance": 2.5,
+    "dodgeCooldownTicks": 25,
+    "hitStunTicks": 5,
+    "interruptStunTicks": 10,
+    "comboCount": 3,
+    "comboWindowTicks": 15,
+    "comboAttacks": [
+        { "damageMultiplier": 1.0, "rangeMultiplier": 1.0, "windUpTicks": 5, "activeTicks": 3 },
+        { "damageMultiplier": 1.0, "rangeMultiplier": 1.0, "windUpTicks": 4, "activeTicks": 3 },
+        { "damageMultiplier": 1.2, "rangeMultiplier": 1.1, "windUpTicks": 6, "activeTicks": 4 }
+    ]
+}
