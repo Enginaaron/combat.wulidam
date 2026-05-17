@@ -3,6 +3,7 @@ package combat.wulidam;
 import combat.wulidam.combat.WeaponRegistry;
 import combat.wulidam.event.CombatTickHandler;
 import combat.wulidam.item.ModItems;
+import combat.wulidam.network.ModPayloads;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -29,6 +30,12 @@ public class SoulsLikeCombat implements ModInitializer {
 
 		// Register weapon data resource reload listener
 		WeaponRegistry.register();
+
+		// Register networking payload types (must happen before receivers)
+		ModPayloads.registerPayloadTypes();
+
+		// Register server-side C2S packet receivers
+		ModPayloads.registerServerReceivers();
 
 		// Register server tick handler for combat state machine
 		CombatTickHandler.register();

@@ -17,6 +17,13 @@ import java.util.function.Function;
  */
 public class ModItems {
 
+    public static final Item SWORD = register("sword",
+            SwordItem::new,
+            new Item.Settings().sword(ToolMaterial.IRON, 5, -2.4f));
+
+    public static final Item SHIELD = register("shield",
+            ShieldItem::new,
+            new Item.Settings().sword(ToolMaterial.IRON, 5, -2.4f));
 
     /**
      * Sword and Shield: Medium speed, medium damage, easier parry.
@@ -75,6 +82,8 @@ public class ModItems {
             entries.add(SCYTHE);
             entries.add(LONGSWORD);
             entries.add(GREATBOW);
+            entries.add(SWORD);
+            entries.add(SHIELD);
         });
     }
 }

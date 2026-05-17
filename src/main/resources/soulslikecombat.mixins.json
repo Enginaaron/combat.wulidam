@@ -3,7 +3,8 @@
 	"package": "combat.wulidam.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
+		"PlayerAttackMixin",
+		"LivingEntityDamageMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
