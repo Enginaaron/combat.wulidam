@@ -5,10 +5,13 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import combat.wulidam.SoulsLikeCombat;
+import combat.wulidam.network.s2c.WeaponDataSyncS2CPayload;
+import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener;
 import net.minecraft.resource.ResourceManager;
 import net.minecraft.resource.ResourceType;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.Identifier;
 
 import java.io.InputStreamReader;
@@ -151,5 +154,31 @@ public class WeaponRegistry {
      */
     public static boolean hasWeaponData(Identifier id) {
         return WEAPON_DATA.containsKey(id);
+    }
+
+    // --- Client-Side Data ---
+
+    /**
+     * Called by the client S2C receiver to populate the client-side weapon data cache.
+     * On the client, weapon data is received from the server via WeaponDataSyncS2CPayload
+     * rather than loaded from JSON files directly.
+     */
+    public static void registerClientWeaponData(WeaponData data) {
+        WEAPON_DATA.put(data.id(), data);
+    }
+
+    // --- Server-Side Sync ---
+
+    /**
+     * Send all loaded weapon data to a player. Called when a player joins the server.
+     */
+    public static void syncToPlayer(ServerPlayerEntity player) {
+        List<WeaponDataSyncS2CPayload.WeaponDataEntry> entries = new ArrayList<>();
+        for (WeaponData data : WEAPON_DATA.values()) {
+            entries.add(WeaponDataSyncS2CPayload.fromWeaponData(data));
+        }
+        ServerPlayNetworking.send(player, new WeaponDataSyncS2CPayload(entries));
+        SoulsLikeCombat.LOGGER.debug("Synced {} weapon data entries to {}",
+                entries.size(), player.getName().getString());
     }
 }

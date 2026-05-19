@@ -2,6 +2,8 @@ package combat.wulidam.combat;
 
 import combat.wulidam.SoulsLikeCombat;
 import combat.wulidam.item.SoulsWeaponItem;
+import combat.wulidam.network.s2c.CombatStateS2CPayload;
+import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
@@ -47,17 +49,30 @@ public class CombatStateManager {
         } else {
             if (data.getCurrentState() != CombatState.IDLE) {
                 data.reset();
+                syncStateToClient(player, data);
             }
             return;
+        }
+
+        // Sync weapon data to client on first tick (player just joined)
+        if (!data.hasInitialSync()) {
+            WeaponRegistry.syncToPlayer(player);
+            data.setInitialSync(true);
         }
 
         WeaponData weaponData = WeaponRegistry.getWeaponData(data.getCurrentWeaponDataId());
         if (weaponData == null) return;
 
+        CombatState prevState = data.getCurrentState();
         data.tickTimers();
 
         if (data.getStateTicksRemaining() <= 0) {
             handleStateExpiry(player, data, weaponData);
+        }
+
+        // Sync state to client if it changed
+        if (data.getCurrentState() != prevState) {
+            syncStateToClient(player, data);
         }
     }
 
@@ -134,6 +149,7 @@ public class CombatStateManager {
 
         int windUp = weaponData.getWindUpForCombo(data.getComboIndex());
         data.setState(CombatState.WIND_UP, windUp);
+        syncStateToClient(player, data);
 
         SoulsLikeCombat.LOGGER.debug("Player {} → WIND_UP (combo {}/{})",
                 player.getName().getString(), data.getComboIndex() + 1, weaponData.comboCount());
@@ -151,6 +167,7 @@ public class CombatStateManager {
 
         data.setState(CombatState.PARRYING, weaponData.parryWindowTicks());
         data.setComboIndex(0);
+        syncStateToClient(player, data);
         return true;
     }
 
@@ -168,6 +185,7 @@ public class CombatStateManager {
 
         data.setState(CombatState.DODGING, weaponData.dodgeTicks());
         data.setComboIndex(0);
+        syncStateToClient(player, data);
         return true;
     }
 
@@ -175,16 +193,34 @@ public class CombatStateManager {
         PlayerCombatData data = getOrCreate(player);
         data.setState(CombatState.STUNNED, stunTicks);
         data.setComboIndex(0);
+        syncStateToClient(player, data);
     }
 
     public static void applyParrySuccess(ServerPlayerEntity player, int rewardTicks) {
         PlayerCombatData data = getOrCreate(player);
         data.setState(CombatState.PARRY_SUCCESS, rewardTicks);
         data.setParryCooldownRemaining(0);
+        syncStateToClient(player, data);
     }
 
     public static void advanceCombo(ServerPlayerEntity player) {
         PlayerCombatData data = getOrCreate(player);
         data.setComboIndex(data.getComboIndex() + 1);
+    }
+
+    // --- Networking ---
+
+    /**
+     * Send the current combat state to the client for HUD/animation sync.
+     */
+    public static void syncStateToClient(ServerPlayerEntity player, PlayerCombatData data) {
+        CombatStateS2CPayload payload = new CombatStateS2CPayload(
+                data.getCurrentState(),
+                data.getStateTicksRemaining(),
+                data.getComboIndex(),
+                data.getParryCooldownRemaining(),
+                data.getDodgeCooldownRemaining()
+        );
+        ServerPlayNetworking.send(player, payload);
     }
 }
