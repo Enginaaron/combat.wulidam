@@ -29,6 +29,8 @@ public class PlayerCombatData {
     // --- Flags ---
     /** True if an attack in the current active frames has already dealt damage to a target. */
     private boolean attackHitConnected = false;
+    /** True once the initial weapon data sync has been sent to this player's client. */
+    private boolean initialSync = false;
 
     public PlayerCombatData(UUID playerUuid) {
         this.playerUuid = playerUuid;
@@ -72,6 +74,10 @@ public class PlayerCombatData {
         return attackHitConnected;
     }
 
+    public boolean hasInitialSync() {
+        return initialSync;
+    }
+
     // --- Setters / Mutations ---
 
     public void setState(CombatState state, int ticks) {
@@ -104,6 +110,10 @@ public class PlayerCombatData {
         this.attackHitConnected = connected;
     }
 
+    public void setInitialSync(boolean synced) {
+        this.initialSync = synced;
+    }
+
     /**
      * Tick down timers. Called every server tick.
      */
@@ -129,5 +139,6 @@ public class PlayerCombatData {
         parryCooldownRemaining = 0;
         dodgeCooldownRemaining = 0;
         attackHitConnected = false;
+        initialSync = false;
     }
 }

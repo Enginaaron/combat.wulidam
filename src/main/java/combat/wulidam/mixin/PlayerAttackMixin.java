@@ -1,17 +1,19 @@
 package combat.wulidam.mixin;
 
+import combat.wulidam.combat.CombatStateManager;
 import combat.wulidam.item.SoulsWeaponItem;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.server.network.ServerPlayerEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 /**
- * Disables vanilla attack mechanics when the player is holding a SoulsWeaponItem.
- * All combat damage is routed through our custom AttackHandler instead.
+ * Disables vanilla attack mechanics when the player is holding a
+ * SoulsWeaponItem
  *
  * This prevents vanilla damage calculation, sweep attacks, and cooldown logic
  * from interfering with the souls-like combat system.
@@ -25,9 +27,12 @@ public class PlayerAttackMixin {
         ItemStack mainHand = player.getMainHandStack();
 
         if (mainHand.getItem() instanceof SoulsWeaponItem) {
-            // Cancel vanilla attack — our system handles damage via
-            // AttackHandler.processAttackTick() during the ATTACKING state
             ci.cancel();
+
+            // On the server, trigger the custom combat state machine.
+            if (player instanceof ServerPlayerEntity serverPlayer) {
+                CombatStateManager.requestAttack(serverPlayer);
+            }
         }
     }
 }

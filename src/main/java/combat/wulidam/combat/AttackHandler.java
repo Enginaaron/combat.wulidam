@@ -1,6 +1,8 @@
 package combat.wulidam.combat;
 
 import combat.wulidam.SoulsLikeCombat;
+import combat.wulidam.network.s2c.HitResultS2CPayload;
+import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -52,19 +54,23 @@ public class AttackHandler {
         switch (targetData.getCurrentState()) {
             case PARRYING -> {
                 ParryHandler.resolveSuccessfulParry(attacker, target, weaponData);
+                sendHitResult(attacker, target, 0, HitResultS2CPayload.HIT_PARRIED);
             }
             case DODGING -> {
                 // i-frames — miss
+                sendHitResult(attacker, target, 0, HitResultS2CPayload.HIT_DODGED);
             }
             case WIND_UP, ATTACKING -> {
                 float damage = weaponData.getDamageForCombo(attackerData.getComboIndex());
                 DamageCalculator.applyDamage(attacker, target, damage, weaponData);
                 CombatStateManager.applyStun(target, weaponData.interruptStunTicks());
+                sendHitResult(attacker, target, damage, HitResultS2CPayload.HIT_INTERRUPTED);
             }
             default -> {
                 float damage = weaponData.getDamageForCombo(attackerData.getComboIndex());
                 DamageCalculator.applyDamage(attacker, target, damage, weaponData);
                 CombatStateManager.applyStun(target, weaponData.hitStunTicks());
+                sendHitResult(attacker, target, damage, HitResultS2CPayload.HIT_NORMAL);
             }
         }
     }
@@ -86,5 +92,16 @@ public class AttackHandler {
         return world.getOtherEntities(attacker, searchBox,
                 entity -> entity instanceof LivingEntity && entity.isAlive()
                         && entity.squaredDistanceTo(attacker) <= range * range);
+    }
+
+    /**
+     * Send hit result feedback to both the attacker and the target (if target is a player).
+     */
+    private static void sendHitResult(ServerPlayerEntity attacker, ServerPlayerEntity target,
+                                      float damage, int hitType) {
+        HitResultS2CPayload payload = new HitResultS2CPayload(
+                attacker.getUuid(), target.getUuid(), damage, hitType);
+        ServerPlayNetworking.send(attacker, payload);
+        ServerPlayNetworking.send(target, payload);
     }
 }
