@@ -1,6 +1,7 @@
 package combat.wulidam.combat;
 
 import combat.wulidam.SoulsLikeCombat;
+import combat.wulidam.item.ShieldItem;
 import combat.wulidam.network.s2c.HitResultS2CPayload;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.entity.Entity;
@@ -61,7 +62,13 @@ public class AttackHandler {
                 sendHitResult(attacker, target, 0, HitResultS2CPayload.HIT_DODGED);
             }
             case WIND_UP, ATTACKING -> {
-                float damage = weaponData.getDamageForCombo(attackerData.getComboIndex());
+                if (target.isUsingItem() && target.getActiveItem().getItem() instanceof ShieldItem shield) {
+                    sendHitResult(attacker, target, 0, HitResultS2CPayload.HIT_BLOCKED);
+                    return;
+
+                }
+
+                    float damage = weaponData.getDamageForCombo(attackerData.getComboIndex());
                 DamageCalculator.applyDamage(attacker, target, damage, weaponData);
                 CombatStateManager.applyStun(target, weaponData.interruptStunTicks());
                 sendHitResult(attacker, target, damage, HitResultS2CPayload.HIT_INTERRUPTED);
@@ -77,6 +84,15 @@ public class AttackHandler {
 
     private static void handlePvEHit(ServerPlayerEntity attacker, LivingEntity target,
                                      PlayerCombatData attackerData, WeaponData weaponData) {
+        // --- SHIELD BLOCK CHECK ---
+        if (target instanceof ServerPlayerEntity player) {
+            if (player.isUsingItem() && player.getActiveItem().getItem() instanceof ShieldItem) {
+                // full block example
+                sendHitResult(attacker, player, 0, HitResultS2CPayload.HIT_BLOCKED);
+                return;
+            }
+        }
+
         float damage = weaponData.getDamageForCombo(attackerData.getComboIndex());
         DamageCalculator.applyDamage(attacker, target, damage, weaponData);
     }

@@ -3,6 +3,7 @@ package combat.wulidam.mixin;
 import combat.wulidam.combat.CombatState;
 import combat.wulidam.combat.CombatStateManager;
 import combat.wulidam.combat.PlayerCombatData;
+import combat.wulidam.item.ShieldItem;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -33,6 +34,12 @@ public class LivingEntityDamageMixin {
             if (data != null && data.getCurrentState().hasIFrames()) {
                 // Player is dodging with active i-frames — cancel all damage
                 cir.setReturnValue(false);
+                return;
+            }
+            // 2. Shield block
+            if (player.isUsingItem() && player.getActiveItem().getItem() instanceof ShieldItem) {
+                cir.setReturnValue(false);
+                return;
             }
         }
     }

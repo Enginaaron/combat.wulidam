@@ -6,6 +6,11 @@ import combat.wulidam.combat.CombatStateManager;
 import combat.wulidam.combat.PlayerCombatData;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.minecraft.server.network.ServerPlayerEntity;
+import combat.wulidam.SoulsLikeCombat;
+import combat.wulidam.SplitTracker;
+import combat.wulidam.item.ModItems;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.Hand;
 
 /**
  * Registers and handles the server tick event for the combat system.
@@ -27,6 +32,24 @@ public class CombatTickHandler {
                 PlayerCombatData data = CombatStateManager.getOrCreate(player);
                 if (data.getCurrentState() == CombatState.ATTACKING) {
                     AttackHandler.processAttackTick(player);
+                }
+
+                // Reassemble SwordAndShield if player is holding the split sword+shield created by toggle
+                ItemStack main = player.getMainHandStack();
+                ItemStack off = player.getOffHandStack();
+                // Only reassemble if this player was the one who split previously
+                if (SplitTracker.isMarked(player.getUuid()) && main.getItem() == ModItems.SWORD && off.getItem() == ModItems.SHIELD) {
+                    ItemStack saved = SplitTracker.getSavedStack(player.getUuid());
+                    // Reference equality: if the player's current main hand stack object is different,
+                    // they switched hotbar slot (or the stack changed) and we should reassemble.
+                    if (saved != null && player.getMainHandStack() != saved) {
+                        ItemStack combined = new ItemStack(ModItems.SWORD_AND_SHIELD, 1);
+
+                        player.setStackInHand(Hand.MAIN_HAND, combined);
+                        player.setStackInHand(Hand.OFF_HAND, ItemStack.EMPTY);
+                        SplitTracker.clearSplit(player.getUuid());
+                        SoulsLikeCombat.LOGGER.debug("Reassembled SwordAndShield for {} (slot switch)", player.getName().getString());
+                    }
                 }
             }
         });
