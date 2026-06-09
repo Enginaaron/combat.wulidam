@@ -1,8 +1,8 @@
 {
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "item/mash_shield",
-		"particle": "item/mash_shield"
+		"0": "soulslikecombat:item/shield",
+		"particle": "soulslikecombat:item/shield"
 	},
 	"elements": [
 		{

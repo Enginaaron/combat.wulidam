@@ -3,6 +3,8 @@
     "item.soulslikecombat.dagger": "Dagger",
     "item.soulslikecombat.scythe": "Scythe",
     "item.soulslikecombat.longsword": "Longsword",
+    "item.soulslikecombat.shield": "Shield",
+    "item.soulslikecombat.sword": "Sword",
 
     "tooltip.soulslikecombat.combat_stats": "⚔ Combat Stats",
     "tooltip.soulslikecombat.damage": "  Damage: %s",
