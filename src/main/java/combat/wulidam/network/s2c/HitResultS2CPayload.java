@@ -30,6 +30,7 @@ public record HitResultS2CPayload(
     public static final int HIT_PARRIED = 1;
     public static final int HIT_DODGED = 2;
     public static final int HIT_INTERRUPTED = 3;
+    public static final int HIT_BLOCKED = 4;
 
     public static final Id<HitResultS2CPayload> ID =
             new Id<>(Identifier.of(SoulsLikeCombat.MOD_ID, "hit_result_s2c"));
