@@ -14,6 +14,10 @@ import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.item.ItemStack;
+import combat.wulidam.network.c2s.TeleportDodgeC2SPayload;
+import combat.wulidam.network.s2c.TeleportDodgeS2CPayload;
+import combat.wulidam.AnimationHooks;
+import net.minecraft.util.math.Vec3d;
 import org.lwjgl.glfw.GLFW;
 
 /**
@@ -21,6 +25,8 @@ import org.lwjgl.glfw.GLFW;
  * keybinds (Phase 3), HUD overlays (Phase 3), and animation handlers (Phase 4).
  */
 public class SoulsLikeCombatClient implements ClientModInitializer {
+    private static final double TELEPORT_DODGE_DISTANCE = 2.0; // blocks
+
     @Override
     public void onInitializeClient() {
         registerS2CReceivers();
@@ -30,6 +36,14 @@ public class SoulsLikeCombatClient implements ClientModInitializer {
                 "key.soulslikecombat.toggle_weapon",
                 InputUtil.Type.KEYSYM,
                 GLFW.GLFW_KEY_V,
+                KeyBinding.Category.MISC
+        ));
+
+        // Register keybind for dodging
+        KeyBinding dodgeKey = KeyBindingHelper.registerKeyBinding(new KeyBinding(
+                "key.soulslikecombat.dodge",
+                InputUtil.Type.KEYSYM,
+                GLFW.GLFW_KEY_C,
                 KeyBinding.Category.MISC
         ));
 
@@ -47,6 +61,24 @@ public class SoulsLikeCombatClient implements ClientModInitializer {
                 // Temporary client-side cooldown to ignore immediate server-driven stack changes
                 splitCooldown[0] = 20;
                 prevMain[0] = client.player.getMainHandStack();
+            }
+
+            // Handle dodge-teleport key: send a 1-block left/right/back offset depending on A/D or none
+            while (dodgeKey.wasPressed()) {
+                Vec3d look = client.player.getRotationVec(1.0f);
+                Vec3d offset;
+                // Swap left/right so A => left, D => right in player-local terms
+                if (client.options.leftKey.isPressed()) {
+                    // left (was previously right): use (z,0,-x)
+                    offset = new Vec3d(look.z, 0, -look.x).normalize().multiply(TELEPORT_DODGE_DISTANCE);
+                } else if (client.options.rightKey.isPressed()) {
+                    // right (was previously left): use (-z,0,x)
+                    offset = new Vec3d(-look.z, 0, look.x).normalize().multiply(TELEPORT_DODGE_DISTANCE);
+                } else {
+                    // backward = (-x, 0, -z)
+                    offset = new Vec3d(-look.x, 0, -look.z).normalize().multiply(TELEPORT_DODGE_DISTANCE);
+                }
+                ClientPlayNetworking.send(new TeleportDodgeC2SPayload(offset));
             }
 
             // Decrement cooldown
@@ -103,6 +135,17 @@ public class SoulsLikeCombatClient implements ClientModInitializer {
                 }
                 SoulsLikeCombat.LOGGER.info("Client received {} weapon data entries",
                         payload.entries().size());
+            });
+        });
+
+        // Teleport-dodge S2C: play client-side dodge animation/effects (or bump if blocked)
+        ClientPlayNetworking.registerGlobalReceiver(TeleportDodgeS2CPayload.ID, (payload, context) -> {
+            context.client().execute(() -> {
+                if (payload.bumped()) {
+                    AnimationHooks.playDodgeBump();
+                } else {
+                    AnimationHooks.playBlenderDodge();
+                }
             });
         });
     }

@@ -8,6 +8,8 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.util.Hand;
+import net.minecraft.util.math.Vec3d;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -36,10 +38,23 @@ public class LivingEntityDamageMixin {
                 cir.setReturnValue(false);
                 return;
             }
-            // 2. Shield block
-            if (player.isUsingItem() && player.getActiveItem().getItem() instanceof ShieldItem) {
-                cir.setReturnValue(false);
-                return;
+            // 2. Shield block — only if actively using the shield in off-hand and facing attacker
+            if (player.isUsingItem() && player.getActiveItem().getItem() instanceof ShieldItem && player.getActiveHand() == Hand.OFF_HAND) {
+                // Get attacker entity from the damage source
+                LivingEntity attacker = null;
+                try {
+                    attacker = (LivingEntity) source.getAttacker();
+                } catch (ClassCastException ignored) {}
+
+                if (attacker != null) {
+                    Vec3d toAttacker = attacker.getEyePos().subtract(player.getEyePos()).normalize();
+                    Vec3d playerLook = player.getRotationVec(1.0f).normalize();
+                    if (playerLook.dotProduct(toAttacker) > 0.7071) {
+                        // Block the damage
+                        cir.setReturnValue(false);
+                        return;
+                    }
+                }
             }
         }
     }

@@ -9,6 +9,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.Box;
+import net.minecraft.util.Hand;
 import net.minecraft.util.math.Vec3d;
 
 import java.util.List;
@@ -62,13 +63,15 @@ public class AttackHandler {
                 sendHitResult(attacker, target, 0, HitResultS2CPayload.HIT_DODGED);
             }
             case WIND_UP, ATTACKING -> {
-                if (target.isUsingItem() && target.getActiveItem().getItem() instanceof ShieldItem shield) {
-                    sendHitResult(attacker, target, 0, HitResultS2CPayload.HIT_BLOCKED);
-                    return;
-
+                if (target.isUsingItem() && target.getActiveItem().getItem() instanceof ShieldItem shield && target.getActiveHand() == Hand.OFF_HAND) {
+                    // Only block if target is actively using the shield in the off-hand and is facing attacker
+                    if (isFacingSameDirection(attacker, target)) {
+                        sendHitResult(attacker, target, 0, HitResultS2CPayload.HIT_BLOCKED);
+                        return;
+                    }
                 }
 
-                    float damage = weaponData.getDamageForCombo(attackerData.getComboIndex());
+                float damage = weaponData.getDamageForCombo(attackerData.getComboIndex());
                 DamageCalculator.applyDamage(attacker, target, damage, weaponData);
                 CombatStateManager.applyStun(target, weaponData.interruptStunTicks());
                 sendHitResult(attacker, target, damage, HitResultS2CPayload.HIT_INTERRUPTED);
@@ -86,15 +89,25 @@ public class AttackHandler {
                                      PlayerCombatData attackerData, WeaponData weaponData) {
         // --- SHIELD BLOCK CHECK ---
         if (target instanceof ServerPlayerEntity player) {
-            if (player.isUsingItem() && player.getActiveItem().getItem() instanceof ShieldItem) {
-                // full block example
-                sendHitResult(attacker, player, 0, HitResultS2CPayload.HIT_BLOCKED);
-                return;
+            if (player.isUsingItem() && player.getActiveItem().getItem() instanceof ShieldItem && player.getActiveHand() == Hand.OFF_HAND) {
+                // Only block if player is actively using the shield in the off-hand and is facing attacker
+                if (isFacingSameDirection(attacker, player)) {
+                    sendHitResult(attacker, player, 0, HitResultS2CPayload.HIT_BLOCKED);
+                    return;
+                }
             }
         }
 
         float damage = weaponData.getDamageForCombo(attackerData.getComboIndex());
         DamageCalculator.applyDamage(attacker, target, damage, weaponData);
+    }
+
+    private static boolean isFacingSameDirection(ServerPlayerEntity attacker, LivingEntity target) {
+        // Check if the target (defender) is looking towards the attacker using eye positions.
+        Vec3d toAttacker = attacker.getEyePos().subtract(target.getEyePos()).normalize();
+        Vec3d targetLook = target.getRotationVec(1.0f).normalize();
+        // dot > 0.7071 means defender is facing within ~45° of the attacker
+        return targetLook.dotProduct(toAttacker) > 0.7071;
     }
 
     private static List<Entity> findTargetsInRange(ServerPlayerEntity attacker, float range) {
