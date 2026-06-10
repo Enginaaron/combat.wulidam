@@ -1,5 +1,6 @@
 package combat.wulidam;
 
+import combat.wulidam.combat.CombatState;
 import combat.wulidam.combat.WeaponData;
 import combat.wulidam.combat.WeaponRegistry;
 import combat.wulidam.network.s2c.CombatStateS2CPayload;
