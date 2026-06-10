@@ -5,11 +5,13 @@ import combat.wulidam.combat.CombatState;
 import combat.wulidam.combat.CombatStateManager;
 import combat.wulidam.combat.PlayerCombatData;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
+import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.server.network.ServerPlayerEntity;
 import combat.wulidam.SoulsLikeCombat;
 import combat.wulidam.SplitTracker;
 import combat.wulidam.item.ModItems;
 import net.minecraft.item.ItemStack;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.Hand;
 
 /**
@@ -24,6 +26,14 @@ public class CombatTickHandler {
      */
     public static void register() {
         ServerTickEvents.END_SERVER_TICK.register(server -> {
+            for (ServerWorld world : server.getWorlds()) {
+                for (net.minecraft.entity.Entity entity : world.iterateEntities()) {
+                    if (entity instanceof MobEntity mob) {
+                        CombatStateManager.tickMobStun(mob);
+                    }
+                }
+            }
+
             for (ServerPlayerEntity player : server.getPlayerManager().getPlayerList()) {
                 // Tick the combat state machine
                 CombatStateManager.tick(player);

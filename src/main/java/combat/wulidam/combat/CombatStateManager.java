@@ -4,6 +4,9 @@ import combat.wulidam.SoulsLikeCombat;
 import combat.wulidam.item.SoulsWeaponItem;
 import combat.wulidam.network.s2c.CombatStateS2CPayload;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
@@ -11,6 +14,7 @@ import net.minecraft.server.world.ServerWorld;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
+import java.util.WeakHashMap;
 
 /**
  * Server-authoritative combat state machine manager.
@@ -19,6 +23,7 @@ import java.util.UUID;
  */
 public class CombatStateManager {
     private static final Map<UUID, PlayerCombatData> PLAYER_DATA = new HashMap<>();
+    private static final Map<MobEntity, Integer> MOB_STUN_TICKS = new WeakHashMap<>();
 
     // --- Data Access ---
 
@@ -194,11 +199,33 @@ public class CombatStateManager {
         return true;
     }
 
-    public static void applyStun(ServerPlayerEntity player, int stunTicks) {
-        PlayerCombatData data = getOrCreate(player);
-        data.setState(CombatState.STUNNED, stunTicks);
-        data.setComboIndex(0);
-        syncStateToClient(player, data);
+    public static void applyStun(LivingEntity entity, int stunTicks) {
+        if (entity instanceof ServerPlayerEntity player) {
+            PlayerCombatData data = getOrCreate(player);
+            data.setState(CombatState.STUNNED, stunTicks);
+            data.setComboIndex(0);
+            syncStateToClient(player, data);
+        } else if (entity instanceof MobEntity mob) {
+            MOB_STUN_TICKS.put(mob, stunTicks);
+            // Disable AI by setting noAI to true during stun
+            mob.setAiDisabled(true);
+        }
+    }
+
+    public static boolean isMobStunned(MobEntity mob) {
+        return MOB_STUN_TICKS.containsKey(mob);
+    }
+
+    public static void tickMobStun(MobEntity mob) {
+        if (MOB_STUN_TICKS.containsKey(mob)) {
+            int ticks = MOB_STUN_TICKS.get(mob);
+            if (ticks <= 1) {
+                MOB_STUN_TICKS.remove(mob);
+                mob.setAiDisabled(false);
+            } else {
+                MOB_STUN_TICKS.put(mob, ticks - 1);
+            }
+        }
     }
 
     public static void applyParrySuccess(ServerPlayerEntity player, int rewardTicks) {

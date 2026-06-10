@@ -55,6 +55,14 @@ public class SoulsLikeCombatClient implements ClientModInitializer {
                 KeyBinding.Category.MISC
         ));
 
+        // register keybind for parrying
+        KeyBinding parryKey = KeyBindingHelper.registerKeyBinding(new KeyBinding(
+                "key.soulslikecombat.parry",
+                InputUtil.Type.KEYSYM,
+                GLFW.GLFW_KEY_F,
+                KeyBinding.Category.MISC
+        ));
+
         // Client-side state to detect hotbar/main-hand changes
         final ItemStack[] prevMain = new ItemStack[] { ItemStack.EMPTY };
         final int[] splitCooldown = new int[] { 0 };
@@ -87,6 +95,11 @@ public class SoulsLikeCombatClient implements ClientModInitializer {
                     offset = new Vec3d(-look.x, 0, -look.z).normalize().multiply(TELEPORT_DODGE_DISTANCE);
                 }
                 ClientPlayNetworking.send(new TeleportDodgeC2SPayload(offset));
+            }
+
+            // handle parry key
+            while (parryKey.wasPressed()) {
+                ClientPlayNetworking.send(new combat.wulidam.network.c2s.ParryC2SPayload());
             }
 
             // Decrement cooldown

@@ -1,5 +1,6 @@
 package combat.wulidam.combat;
 
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.server.network.ServerPlayerEntity;
 
 /**
@@ -9,7 +10,7 @@ public class ParryHandler {
 
     private static final int PARRY_SUCCESS_REWARD_TICKS = 10;
 
-    public static void resolveSuccessfulParry(ServerPlayerEntity attacker,
+    public static void resolveSuccessfulParry(LivingEntity attacker,
                                               ServerPlayerEntity defender,
                                               WeaponData weaponData) {
         CombatStateManager.applyStun(attacker, weaponData.parryStunTicks());
@@ -17,7 +18,7 @@ public class ParryHandler {
         CombatStateManager.applyParrySuccess(defender, PARRY_SUCCESS_REWARD_TICKS);
     }
 
-    private static void applyParryKnockback(ServerPlayerEntity attacker,
+    private static void applyParryKnockback(LivingEntity attacker,
                                             ServerPlayerEntity defender,
                                             float strength) {
         double dx = attacker.getX() - defender.getX();

@@ -38,16 +38,21 @@ public class AttackHandler {
             if (target == attacker) continue;
             if (!target.isAlive()) continue;
 
-            if (target instanceof ServerPlayerEntity targetPlayer) {
-                handlePvPHit(attacker, targetPlayer, attackerData, weaponData);
-            } else {
-                handlePvEHit(attacker, target, attackerData, weaponData);
-            }
+            handleGenericHit(attacker, target, attackerData, weaponData);
 
             // lock this attack phase after first connect so multi hit spam does not happen
             attackerData.setAttackHitConnected(true);
             CombatStateManager.advanceCombo(attacker);
             break;
+        }
+    }
+
+    private static void handleGenericHit(ServerPlayerEntity attacker, LivingEntity target,
+                                         PlayerCombatData attackerData, WeaponData weaponData) {
+        if (target instanceof ServerPlayerEntity targetPlayer) {
+            handlePvPHit(attacker, targetPlayer, attackerData, weaponData);
+        } else {
+            handlePvEHit(attacker, target, attackerData, weaponData);
         }
     }
 
@@ -88,22 +93,23 @@ public class AttackHandler {
         }
     }
 
-    // pve path is simpler: no custom combat state checks except optional shield-user block
+    // pve path: no custom combat state checks except optional shield-user block
     private static void handlePvEHit(ServerPlayerEntity attacker, LivingEntity target,
                                      PlayerCombatData attackerData, WeaponData weaponData) {
         // --- SHIELD BLOCK CHECK ---
-        if (target instanceof ServerPlayerEntity player) {
-            if (player.isUsingItem() && player.getActiveItem().getItem() instanceof ShieldItem && player.getActiveHand() == Hand.OFF_HAND) {
-                // Only block if player is actively using the shield in the off-hand and is facing attacker
-                if (isFacingSameDirection(attacker, player)) {
-                    sendHitResult(attacker, player, 0, HitResultS2CPayload.HIT_BLOCKED);
-                    return;
+        if (target.isUsingItem() && target.getActiveItem().getItem() instanceof ShieldItem && target.getActiveHand() == Hand.OFF_HAND) {
+            // Only block if target is actively using the shield in the off-hand and is facing attacker
+            if (isFacingSameDirection(attacker, target)) {
+                if (target instanceof ServerPlayerEntity targetPlayer) {
+                    sendHitResult(attacker, targetPlayer, 0, HitResultS2CPayload.HIT_BLOCKED);
                 }
+                return;
             }
         }
 
         float damage = weaponData.getDamageForCombo(attackerData.getComboIndex());
         DamageCalculator.applyDamage(attacker, target, damage, weaponData);
+        CombatStateManager.applyStun(target, weaponData.hitStunTicks());
     }
 
     private static boolean isFacingSameDirection(ServerPlayerEntity attacker, LivingEntity target) {
