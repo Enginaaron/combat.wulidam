@@ -6,6 +6,9 @@
 		"PlayerAttackMixin",
 		"LivingEntityDamageMixin"
 	],
+	"client": [
+		"MinecraftClientAttackMixin"
+	],
 	"injectors": {
 		"defaultRequire": 1
 	},

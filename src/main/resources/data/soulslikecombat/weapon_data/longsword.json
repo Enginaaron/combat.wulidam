@@ -1,7 +1,7 @@
 {
     "baseDamage": 10.0,
     "attackRange": 3.5,
-    "windUpTicks": 10,
+    "windUpTicks": 6,
     "activeTicks": 4,
     "recoveryTicks": 16,
     "parryWindowTicks": 5,
@@ -18,7 +18,7 @@
     "comboCount": 2,
     "comboWindowTicks": 20,
     "comboAttacks": [
-        { "damageMultiplier": 1.0, "rangeMultiplier": 1.0, "windUpTicks": 10, "activeTicks": 4 },
-        { "damageMultiplier": 1.5, "rangeMultiplier": 1.0, "windUpTicks": 12, "activeTicks": 5 }
+        { "damageMultiplier": 1.0, "rangeMultiplier": 1.0, "windUpTicks": 4, "activeTicks": 2 },
+        { "damageMultiplier": 1.5, "rangeMultiplier": 1.0, "windUpTicks": 5, "activeTicks": 3 }
     ]
 }

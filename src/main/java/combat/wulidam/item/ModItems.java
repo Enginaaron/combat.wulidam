@@ -53,6 +53,13 @@ public class ModItems {
             LongswordItem::new,
             new Item.Settings().sword(ToolMaterial.IRON, 9, -3.2f));
 
+    /**
+     * Greatbow: Slower draw, higher arrow velocity. Uses normal arrows.
+     */
+    public static final Item GREATBOW = register("greatbow",
+            GreatbowItem::new,
+            new Item.Settings().maxDamage(512));
+
     // --- Registration ---
 
     private static Item register(String name, Function<Item.Settings, Item> factory, Item.Settings settings) {
@@ -74,6 +81,7 @@ public class ModItems {
             entries.add(DAGGER);
             entries.add(SCYTHE);
             entries.add(LONGSWORD);
+            entries.add(GREATBOW);
             entries.add(SWORD);
             entries.add(SHIELD);
         });

@@ -76,6 +76,7 @@ public class CombatStateManager {
         }
     }
 
+    // runs whenever a state timer reaches 0 and decides the next state in flow
     private static void handleStateExpiry(ServerPlayerEntity player, PlayerCombatData data, WeaponData weaponData) {
         ServerWorld world = player.getEntityWorld();
         long currentTick = world.getTime();
@@ -131,6 +132,7 @@ public class CombatStateManager {
         WeaponData weaponData = WeaponRegistry.getWeaponData(data.getCurrentWeaponDataId());
         if (weaponData == null) return false;
 
+        // gate attack input. only allow from actionable states (idle / parry success)
         if (!data.getCurrentState().canAct()) return false;
 
         ServerWorld world = player.getEntityWorld();
@@ -147,6 +149,7 @@ public class CombatStateManager {
             data.setComboIndex(0);
         }
 
+        // start attack at WIND_UP. real hit check happens later in ATTACKING
         int windUp = weaponData.getWindUpForCombo(data.getComboIndex());
         data.setState(CombatState.WIND_UP, windUp);
         syncStateToClient(player, data);
@@ -162,6 +165,7 @@ public class CombatStateManager {
         WeaponData weaponData = WeaponRegistry.getWeaponData(data.getCurrentWeaponDataId());
         if (weaponData == null) return false;
 
+        // same action gate as attack, plus explicit cooldown gate
         if (!data.getCurrentState().canAct()) return false;
         if (data.getParryCooldownRemaining() > 0) return false;
 
@@ -176,6 +180,7 @@ public class CombatStateManager {
         WeaponData weaponData = WeaponRegistry.getWeaponData(data.getCurrentWeaponDataId());
         if (weaponData == null) return false;
 
+        // dodge is a bit more lenient. can flow out of idle, parry reward, or recovery
         CombatState state = data.getCurrentState();
         if (state != CombatState.IDLE && state != CombatState.PARRY_SUCCESS
                 && state != CombatState.RECOVERY) {
@@ -205,6 +210,7 @@ public class CombatStateManager {
 
     public static void advanceCombo(ServerPlayerEntity player) {
         PlayerCombatData data = getOrCreate(player);
+        // called after a confirmed hit connect so next attack picks next combo entry
         data.setComboIndex(data.getComboIndex() + 1);
     }
 
