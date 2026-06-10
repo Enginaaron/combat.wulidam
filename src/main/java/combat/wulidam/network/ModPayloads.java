@@ -25,6 +25,7 @@ import java.util.UUID;
  */
 public class ModPayloads {
 
+    // packet ids/codecs only - no logic here, just wiring to fabric registry
     /**
      * Register all payload types with the PayloadTypeRegistry.
      * Must be called during mod initialization, before receivers are registered.

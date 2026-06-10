@@ -21,6 +21,13 @@ import org.lwjgl.glfw.GLFW;
  * keybinds (Phase 3), HUD overlays (Phase 3), and animation handlers (Phase 4).
  */
 public class SoulsLikeCombatClient implements ClientModInitializer {
+    private static CombatState currentCombatState = CombatState.IDLE;
+
+    // used by client mixins to decide if attack input should be ignored locally
+    public static CombatState getCurrentCombatState() {
+        return currentCombatState;
+    }
+
     @Override
     public void onInitializeClient() {
         registerS2CReceivers();
@@ -78,6 +85,8 @@ public class SoulsLikeCombatClient implements ClientModInitializer {
         // Combat state sync — update client-side state for HUD/animations
         ClientPlayNetworking.registerGlobalReceiver(CombatStateS2CPayload.ID, (payload, context) -> {
             context.client().execute(() -> {
+                currentCombatState = payload.getState();
+
                 // Store client-side combat state for HUD rendering (Phase 3)
                 // For now, just log it for debugging
                 SoulsLikeCombat.LOGGER.debug("Client received combat state: {} (ticks={}, combo={})",

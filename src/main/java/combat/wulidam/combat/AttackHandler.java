@@ -20,6 +20,7 @@ import java.util.List;
  */
 public class AttackHandler {
 
+    // runs during ATTACKING frames only. finds one target and resolves one hit per attack phase
     public static void processAttackTick(ServerPlayerEntity attacker) {
         PlayerCombatData attackerData = CombatStateManager.getOrCreate(attacker);
         if (attackerData.getCurrentState() != CombatState.ATTACKING) return;
@@ -42,12 +43,14 @@ public class AttackHandler {
                 handlePvEHit(attacker, target, attackerData, weaponData);
             }
 
+            // lock this attack phase after first connect so multi hit spam does not happen
             attackerData.setAttackHitConnected(true);
             CombatStateManager.advanceCombo(attacker);
             break;
         }
     }
 
+    // pvp rules: supports parry, dodge iframes, interrupts, shield blocks
     private static void handlePvPHit(ServerPlayerEntity attacker, ServerPlayerEntity target,
                                      PlayerCombatData attackerData, WeaponData weaponData) {
         PlayerCombatData targetData = CombatStateManager.getOrCreate(target);
@@ -82,6 +85,7 @@ public class AttackHandler {
         }
     }
 
+    // pve path is simpler: no custom combat state checks except optional shield-user block
     private static void handlePvEHit(ServerPlayerEntity attacker, LivingEntity target,
                                      PlayerCombatData attackerData, WeaponData weaponData) {
         // --- SHIELD BLOCK CHECK ---
@@ -97,6 +101,7 @@ public class AttackHandler {
         DamageCalculator.applyDamage(attacker, target, damage, weaponData);
     }
 
+    // quick forward box sweep from attacker eyes toward look direction
     private static List<Entity> findTargetsInRange(ServerPlayerEntity attacker, float range) {
         Vec3d eyePos = attacker.getEyePos();
         Vec3d lookDir = attacker.getRotationVec(1.0f);
