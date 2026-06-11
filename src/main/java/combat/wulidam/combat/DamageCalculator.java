@@ -1,5 +1,6 @@
 package combat.wulidam.combat;
 
+import combat.wulidam.item.ScytheItem;
 import combat.wulidam.item.ShieldItem;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
@@ -21,7 +22,11 @@ public class DamageCalculator {
         target.damage(world, source, baseDamage);
         applyWeaponKnockback(attacker, target, weaponData);
 
-
+        // life steal for scythe wep (30% of damage dealt)
+        if (attacker.getMainHandStack().getItem() instanceof ScytheItem) {
+            float healAmount = baseDamage * 0.3f;
+            attacker.heal(healAmount);
+        }
     }
 
     private static void applyWeaponKnockback(ServerPlayerEntity attacker,

@@ -76,8 +76,8 @@ public class CombatStateManager {
             handleStateExpiry(player, data, weaponData);
         }
 
-        // Sync state to client if it changed
-        if (data.getCurrentState() != prevState || Math.abs(data.getStamina() - prevStamina) > 0.01f) {
+        // sync state to client if it changed or stamina changed
+        if (data.getCurrentState() != prevState || Math.abs(data.getStamina() - prevStamina) > (data.getMaxStamina() * 0.0001f)) {
             syncStateToClient(player, data);
         }
     }
@@ -113,7 +113,7 @@ public class CombatStateManager {
             }
             case DODGING -> {
                 data.setState(CombatState.IDLE, 0);
-                data.setDodgeCooldownRemaining(weaponData.dodgeCooldownTicks());
+                data.setDodgeCooldownRemaining(100); // 5 seconds at 20 tps
                 data.setComboIndex(0);
             }
             case STUNNED -> {
@@ -194,7 +194,7 @@ public class CombatStateManager {
         }
         if (data.getDodgeCooldownRemaining() > 0) return false;
 
-        float dodgeCost = 25.0f;
+        float dodgeCost = data.getMaxStamina() * 0.20f;
         if (data.getStamina() < dodgeCost) return false;
 
         data.setStamina(data.getStamina() - dodgeCost);

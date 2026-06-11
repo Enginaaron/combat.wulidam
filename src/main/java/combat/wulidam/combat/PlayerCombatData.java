@@ -23,10 +23,9 @@ public class PlayerCombatData {
     private int parryCooldownRemaining = 0;
     private int dodgeCooldownRemaining = 0;
 
-    // --- Stamina ---
-    private float stamina = 100.0f;
-    private float maxStamina = 100.0f;
-    private static final float STAMINA_REGEN_PER_TICK = 1.5f;
+    // --- stamina ---
+    private float stamina;
+    private float maxStamina;
 
     // --- Weapon ---
     private Identifier currentWeaponDataId = null;
@@ -39,6 +38,8 @@ public class PlayerCombatData {
 
     public PlayerCombatData(UUID playerUuid) {
         this.playerUuid = playerUuid;
+        this.stamina = 100.0f;
+        this.maxStamina = 100.0f;
     }
 
     // --- Getters ---
@@ -121,6 +122,9 @@ public class PlayerCombatData {
 
     public void setMaxStamina(float maxStamina) {
         this.maxStamina = maxStamina;
+        if (this.stamina > maxStamina) {
+            this.stamina = maxStamina;
+        }
     }
 
     public void setCurrentWeaponDataId(Identifier id) {
@@ -149,9 +153,9 @@ public class PlayerCombatData {
             dodgeCooldownRemaining--;
         }
 
-        // Regenerate stamina
+        // Regenerate stamina (1% per second = 0.05% per tick)
         if (stamina < maxStamina) {
-            stamina = Math.min(maxStamina, stamina + STAMINA_REGEN_PER_TICK);
+            stamina = Math.min(maxStamina, stamina + (maxStamina * 0.0005f));
         }
     }
 
