@@ -5,6 +5,7 @@ import net.minecraft.server.network.ServerPlayerEntity;
 
 /**
  * Handles parry resolution — both successful and failed parries.
+ * code that is commented out is the parry knockback if we ever decide to restore that
  */
 public class ParryHandler {
 
@@ -14,22 +15,24 @@ public class ParryHandler {
                                               ServerPlayerEntity defender,
                                               WeaponData weaponData) {
         CombatStateManager.applyStun(attacker, weaponData.parryStunTicks());
-        applyParryKnockback(attacker, defender, weaponData.parryKnockback());
+        // applyParryKnockback(attacker, defender, weaponData.parryKnockback());
         CombatStateManager.applyParrySuccess(defender, PARRY_SUCCESS_REWARD_TICKS);
     }
+}
 
-    private static void applyParryKnockback(LivingEntity attacker,
-                                            ServerPlayerEntity defender,
-                                            float strength) {
-        double dx = attacker.getX() - defender.getX();
-        double dz = attacker.getZ() - defender.getZ();
-        double distance = Math.sqrt(dx * dx + dz * dz);
+/*
+private static void applyParryKnockback(LivingEntity attacker,
+                                        ServerPlayerEntity defender,
+                                        float strength) {
+    double dx = attacker.getX() - defender.getX();
+    double dz = attacker.getZ() - defender.getZ();
+    double distance = Math.sqrt(dx * dx + dz * dz);
 
-        if (distance > 0.01) {
-            double knockbackX = (dx / distance) * strength;
-            double knockbackZ = (dz / distance) * strength;
-            attacker.setVelocity(attacker.getVelocity().add(knockbackX, 0.1, knockbackZ));
-            attacker.velocityDirty = true;
-        }
+    if (distance > 0.01) {
+        double knockbackX = (dx / distance) * strength;
+        double knockbackZ = (dz / distance) * strength;
+        attacker.setVelocity(attacker.getVelocity().add(knockbackX, 0.1, knockbackZ));
+        attacker.velocityDirty = true;
     }
 }
+ */
