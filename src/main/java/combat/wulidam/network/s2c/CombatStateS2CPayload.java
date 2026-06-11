@@ -17,7 +17,9 @@ public record CombatStateS2CPayload(
         int stateTicksRemaining,
         int comboIndex,
         int parryCooldown,
-        int dodgeCooldown
+        int dodgeCooldown,
+        float stamina,
+        float maxStamina
 ) implements CustomPayload {
 
     public static final Id<CombatStateS2CPayload> ID =
@@ -31,13 +33,17 @@ public record CombatStateS2CPayload(
                         buf.writeVarInt(payload.comboIndex());
                         buf.writeVarInt(payload.parryCooldown());
                         buf.writeVarInt(payload.dodgeCooldown());
+                        buf.writeFloat(payload.stamina());
+                        buf.writeFloat(payload.maxStamina());
                     },
                     buf -> new CombatStateS2CPayload(
                             buf.readVarInt(),
                             buf.readVarInt(),
                             buf.readVarInt(),
                             buf.readVarInt(),
-                            buf.readVarInt()
+                            buf.readVarInt(),
+                            buf.readFloat(),
+                            buf.readFloat()
                     )
             );
 
@@ -45,8 +51,8 @@ public record CombatStateS2CPayload(
      * Convenience constructor from combat data fields.
      */
     public CombatStateS2CPayload(CombatState state, int ticksRemaining, int comboIndex,
-                                  int parryCooldown, int dodgeCooldown) {
-        this(state.ordinal(), ticksRemaining, comboIndex, parryCooldown, dodgeCooldown);
+                                  int parryCooldown, int dodgeCooldown, float stamina, float maxStamina) {
+        this(state.ordinal(), ticksRemaining, comboIndex, parryCooldown, dodgeCooldown, stamina, maxStamina);
     }
 
     /**

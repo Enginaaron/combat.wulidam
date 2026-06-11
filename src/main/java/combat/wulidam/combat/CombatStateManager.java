@@ -69,6 +69,7 @@ public class CombatStateManager {
         if (weaponData == null) return;
 
         CombatState prevState = data.getCurrentState();
+        float prevStamina = data.getStamina();
         data.tickTimers();
 
         if (data.getStateTicksRemaining() <= 0) {
@@ -76,7 +77,7 @@ public class CombatStateManager {
         }
 
         // Sync state to client if it changed
-        if (data.getCurrentState() != prevState) {
+        if (data.getCurrentState() != prevState || Math.abs(data.getStamina() - prevStamina) > 0.01f) {
             syncStateToClient(player, data);
         }
     }
@@ -193,6 +194,10 @@ public class CombatStateManager {
         }
         if (data.getDodgeCooldownRemaining() > 0) return false;
 
+        float dodgeCost = 25.0f;
+        if (data.getStamina() < dodgeCost) return false;
+
+        data.setStamina(data.getStamina() - dodgeCost);
         data.setState(CombatState.DODGING, weaponData.dodgeTicks());
         data.setComboIndex(0);
         syncStateToClient(player, data);
@@ -252,7 +257,9 @@ public class CombatStateManager {
                 data.getStateTicksRemaining(),
                 data.getComboIndex(),
                 data.getParryCooldownRemaining(),
-                data.getDodgeCooldownRemaining()
+                data.getDodgeCooldownRemaining(),
+                data.getStamina(),
+                data.getMaxStamina()
         );
         ServerPlayNetworking.send(player, payload);
     }

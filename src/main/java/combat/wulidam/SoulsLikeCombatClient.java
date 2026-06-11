@@ -1,5 +1,9 @@
 package combat.wulidam;
 
+<<<<<<< Updated upstream
+=======
+import combat.wulidam.client.StaminaHudRenderer;
+>>>>>>> Stashed changes
 import combat.wulidam.combat.CombatState;
 import combat.wulidam.combat.WeaponData;
 import combat.wulidam.combat.WeaponRegistry;
@@ -12,6 +16,7 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
+import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.item.ItemStack;
@@ -29,10 +34,20 @@ public class SoulsLikeCombatClient implements ClientModInitializer {
     private static final double TELEPORT_DODGE_DISTANCE = 2.0; // blocks
 
     private static CombatState currentCombatState = CombatState.IDLE;
+    private static float currentStamina = 100.0f;
+    private static float maxStamina = 100.0f;
 
     // used by client mixins to decide if attack input should be ignored locally
     public static CombatState getCurrentCombatState() {
         return currentCombatState;
+    }
+
+    public static float getCurrentStamina() {
+        return currentStamina;
+    }
+
+    public static float getMaxStamina() {
+        return maxStamina;
     }
 
     @Override
@@ -63,6 +78,12 @@ public class SoulsLikeCombatClient implements ClientModInitializer {
                 KeyBinding.Category.MISC
         ));
 
+<<<<<<< Updated upstream
+=======
+        // Register HUD renderer
+        HudRenderCallback.EVENT.register(new StaminaHudRenderer());
+
+>>>>>>> Stashed changes
         // Client-side state to detect hotbar/main-hand changes
         final ItemStack[] prevMain = new ItemStack[] { ItemStack.EMPTY };
         final int[] splitCooldown = new int[] { 0 };
@@ -132,11 +153,13 @@ public class SoulsLikeCombatClient implements ClientModInitializer {
         ClientPlayNetworking.registerGlobalReceiver(CombatStateS2CPayload.ID, (payload, context) -> {
             context.client().execute(() -> {
                 currentCombatState = payload.getState();
+                currentStamina = payload.stamina();
+                maxStamina = payload.maxStamina();
 
                 // Store client-side combat state for HUD rendering (Phase 3)
                 // For now, just log it for debugging
-                SoulsLikeCombat.LOGGER.debug("Client received combat state: {} (ticks={}, combo={})",
-                        payload.getState(), payload.stateTicksRemaining(), payload.comboIndex());
+                SoulsLikeCombat.LOGGER.debug("Client received combat state: {} (ticks={}, combo={}, stamina={}/{})",
+                        payload.getState(), payload.stateTicksRemaining(), payload.comboIndex(), currentStamina, maxStamina);
             });
         });
 

@@ -23,6 +23,11 @@ public class PlayerCombatData {
     private int parryCooldownRemaining = 0;
     private int dodgeCooldownRemaining = 0;
 
+    // --- Stamina ---
+    private float stamina = 100.0f;
+    private float maxStamina = 100.0f;
+    private static final float STAMINA_REGEN_PER_TICK = 1.5f;
+
     // --- Weapon ---
     private Identifier currentWeaponDataId = null;
 
@@ -66,6 +71,14 @@ public class PlayerCombatData {
         return dodgeCooldownRemaining;
     }
 
+    public float getStamina() {
+        return stamina;
+    }
+
+    public float getMaxStamina() {
+        return maxStamina;
+    }
+
     public Identifier getCurrentWeaponDataId() {
         return currentWeaponDataId;
     }
@@ -102,6 +115,14 @@ public class PlayerCombatData {
         this.dodgeCooldownRemaining = ticks;
     }
 
+    public void setStamina(float stamina) {
+        this.stamina = Math.max(0, Math.min(maxStamina, stamina));
+    }
+
+    public void setMaxStamina(float maxStamina) {
+        this.maxStamina = maxStamina;
+    }
+
     public void setCurrentWeaponDataId(Identifier id) {
         this.currentWeaponDataId = id;
     }
@@ -127,6 +148,11 @@ public class PlayerCombatData {
         if (dodgeCooldownRemaining > 0) {
             dodgeCooldownRemaining--;
         }
+
+        // Regenerate stamina
+        if (stamina < maxStamina) {
+            stamina = Math.min(maxStamina, stamina + STAMINA_REGEN_PER_TICK);
+        }
     }
 
     /**
@@ -138,6 +164,7 @@ public class PlayerCombatData {
         comboIndex = 0;
         parryCooldownRemaining = 0;
         dodgeCooldownRemaining = 0;
+        stamina = maxStamina;
         attackHitConnected = false;
         initialSync = false;
     }
