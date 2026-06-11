@@ -1,9 +1,6 @@
 package combat.wulidam;
 
-<<<<<<< Updated upstream
-=======
 import combat.wulidam.client.StaminaHudRenderer;
->>>>>>> Stashed changes
 import combat.wulidam.combat.CombatState;
 import combat.wulidam.combat.WeaponData;
 import combat.wulidam.combat.WeaponRegistry;
@@ -78,12 +75,9 @@ public class SoulsLikeCombatClient implements ClientModInitializer {
                 KeyBinding.Category.MISC
         ));
 
-<<<<<<< Updated upstream
-=======
-        // Register HUD renderer
+        // register HUD renderer
         HudRenderCallback.EVENT.register(new StaminaHudRenderer());
 
->>>>>>> Stashed changes
         // Client-side state to detect hotbar/main-hand changes
         final ItemStack[] prevMain = new ItemStack[] { ItemStack.EMPTY };
         final int[] splitCooldown = new int[] { 0 };
