@@ -1,40 +1,31 @@
-# gradle
-
+# Gradle files
 .gradle/
 build/
-out/
-classes/
 
-# eclipse
-
-*.launch
-
-# idea
-
+# IDE files
 .idea/
+.run/
 *.iml
 *.ipr
 *.iws
-
-# vscode
-
-.settings/
 .vscode/
-bin/
-.classpath
-.project
 
-# macos
-
-*.DS_Store
-
-# fabric
-
+# Minecraft/Fabric redundant files
+logs/
+saves/
+screenshots/
+resourcepacks/
+shaderpacks/
+options.txt
+usercache.json
+command_history.txt
+downloads/
+config/fabric/indigo-renderer.properties
+data/
+mods/
 run/
+.output.txt
 
-# java
-
-hs_err_*.log
-replay_*.log
-*.hprof
-*.jfr
+# Other
+*.log
+*.log.gz
