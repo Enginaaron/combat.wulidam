@@ -36,6 +36,7 @@ public class ModPayloads {
         PayloadTypeRegistry.playC2S().register(AttackC2SPayload.ID, AttackC2SPayload.CODEC);
         PayloadTypeRegistry.playC2S().register(ParryC2SPayload.ID, ParryC2SPayload.CODEC);
         PayloadTypeRegistry.playC2S().register(DodgeC2SPayload.ID, DodgeC2SPayload.CODEC);
+        PayloadTypeRegistry.playC2S().register(VentC2SPayload.ID, VentC2SPayload.CODEC);
         PayloadTypeRegistry.playC2S().register(ToggleWeaponC2SPayload.ID, ToggleWeaponC2SPayload.CODEC);
         PayloadTypeRegistry.playC2S().register(combat.wulidam.network.c2s.RequestReassembleC2SPayload.ID, combat.wulidam.network.c2s.RequestReassembleC2SPayload.CODEC);
         PayloadTypeRegistry.playC2S().register(TeleportDodgeC2SPayload.ID, TeleportDodgeC2SPayload.CODEC);
@@ -161,6 +162,14 @@ public class ModPayloads {
 
                     SoulsLikeCombat.LOGGER.debug("Toggled SwordAndShield for {}", player.getName().getString());
                 }
+            });
+        });
+
+        // on vent use
+        ServerPlayNetworking.registerGlobalReceiver(VentC2SPayload.ID, (payload, context) -> {
+            ServerPlayerEntity player = context.player();
+            context.server().execute(() -> {
+                combat.wulidam.combat.VentHandler.executeVent(player);
             });
         });
 

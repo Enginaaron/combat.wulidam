@@ -34,6 +34,9 @@ public class SoulsLikeCombatClient implements ClientModInitializer {
     private static CombatState currentCombatState = CombatState.IDLE;
     private static float currentStamina = 100.0f;
     private static float maxStamina = 100.0f;
+    private static float currentPosture = 100.0f;
+    private static float maxPosture = 100.0f;
+    private static int ventCooldown = 0;
 
     // used by client mixins to decide if attack input should be ignored locally
     public static CombatState getCurrentCombatState() {
@@ -46,6 +49,18 @@ public class SoulsLikeCombatClient implements ClientModInitializer {
 
     public static float getMaxStamina() {
         return maxStamina;
+    }
+
+    public static float getCurrentPosture() {
+        return currentPosture;
+    }
+
+    public static float getMaxPosture() {
+        return maxPosture;
+    }
+
+    public static int getVentCooldown() {
+        return ventCooldown;
     }
 
     @Override
@@ -76,8 +91,24 @@ public class SoulsLikeCombatClient implements ClientModInitializer {
                 KeyBinding.Category.MISC
         ));
 
+        // register Vent Key (G)
+        net.minecraft.client.option.KeyBinding ventKey = net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper.registerKeyBinding(new net.minecraft.client.option.KeyBinding(
+                "key.soulslikecombat.vent",
+                org.lwjgl.glfw.GLFW.GLFW_KEY_G,
+                net.minecraft.client.option.KeyBinding.Category.MISC
+        ));
+
+        net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents.END_CLIENT_TICK.register(client -> {
+            while (ventKey.wasPressed()) {
+                if (client.player != null) {
+                    net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking.send(new combat.wulidam.network.c2s.VentC2SPayload());
+                }
+            }
+        });
+
         // register HUD renderer
         HudRenderCallback.EVENT.register(new StaminaHudRenderer());
+        HudRenderCallback.EVENT.register(new combat.wulidam.client.PostureHudRenderer());
 
         // Init camera controller
         combat.wulidam.client.CameraController.init(null);
@@ -250,6 +281,9 @@ public class SoulsLikeCombatClient implements ClientModInitializer {
                 currentCombatState = payload.getState();
                 currentStamina = payload.stamina();
                 maxStamina = payload.maxStamina();
+                currentPosture = payload.posture();
+                maxPosture = payload.maxPosture();
+                ventCooldown = payload.ventCooldown();
 
                 // Store client-side combat state for HUD rendering (Phase 3)
                 // For now, just log it for debugging

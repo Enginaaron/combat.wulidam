@@ -19,7 +19,10 @@ public record CombatStateS2CPayload(
         int parryCooldown,
         int dodgeCooldown,
         float stamina,
-        float maxStamina
+        float maxStamina,
+        float posture,
+        float maxPosture,
+        int ventCooldown
 ) implements CustomPayload {
 
     public static final Id<CombatStateS2CPayload> ID =
@@ -35,6 +38,9 @@ public record CombatStateS2CPayload(
                         buf.writeVarInt(payload.dodgeCooldown());
                         buf.writeFloat(payload.stamina());
                         buf.writeFloat(payload.maxStamina());
+                        buf.writeFloat(payload.posture());
+                        buf.writeFloat(payload.maxPosture());
+                        buf.writeVarInt(payload.ventCooldown());
                     },
                     buf -> new CombatStateS2CPayload(
                             buf.readVarInt(),
@@ -43,7 +49,10 @@ public record CombatStateS2CPayload(
                             buf.readVarInt(),
                             buf.readVarInt(),
                             buf.readFloat(),
-                            buf.readFloat()
+                            buf.readFloat(),
+                            buf.readFloat(),
+                            buf.readFloat(),
+                            buf.readVarInt()
                     )
             );
 
@@ -51,8 +60,9 @@ public record CombatStateS2CPayload(
      * Convenience constructor from combat data fields.
      */
     public CombatStateS2CPayload(CombatState state, int ticksRemaining, int comboIndex,
-                                  int parryCooldown, int dodgeCooldown, float stamina, float maxStamina) {
-        this(state.ordinal(), ticksRemaining, comboIndex, parryCooldown, dodgeCooldown, stamina, maxStamina);
+                                  int parryCooldown, int dodgeCooldown, float stamina, float maxStamina,
+                                  float posture, float maxPosture, int ventCooldown) {
+        this(state.ordinal(), ticksRemaining, comboIndex, parryCooldown, dodgeCooldown, stamina, maxStamina, posture, maxPosture, ventCooldown);
     }
 
     /**

@@ -60,7 +60,7 @@ public class CombatStateManager {
             return;
         }
 
-        // Sync weapon data to client on first tick (player just joined)
+        // sync weapon data to client on first tick (player just joined)
         if (!data.hasInitialSync()) {
             WeaponRegistry.syncToPlayer(player);
             data.setInitialSync(true);
@@ -71,14 +71,17 @@ public class CombatStateManager {
 
         CombatState prevState = data.getCurrentState();
         float prevStamina = data.getStamina();
+        float prevPosture = data.getPosture();
         data.tickTimers();
 
         if (data.getStateTicksRemaining() <= 0) {
             handleStateExpiry(player, data, weaponData);
         }
 
-        // sync state to client if it changed or stamina changed
-        if (data.getCurrentState() != prevState || Math.abs(data.getStamina() - prevStamina) > (data.getMaxStamina() * 0.0001f)) {
+        // sync state to client if it changed, stamina changed, or posture changed
+        if (data.getCurrentState() != prevState 
+                || Math.abs(data.getStamina() - prevStamina) > (data.getMaxStamina() * 0.0001f)
+                || Math.abs(data.getPosture() - prevPosture) > (data.getMaxPosture() * 0.0001f)) {
             syncStateToClient(player, data);
         }
     }
@@ -119,13 +122,14 @@ public class CombatStateManager {
             }
             case DODGING -> {
                 data.setState(CombatState.IDLE, 0);
-                // Use weapon-configured dodge cooldown so different weapons can tune spamability
-                data.setDodgeCooldownRemaining(weaponData.dodgeCooldownTicks());
+                // uniform dodge cooldown of 1.5 seconds (30 ticks)
+                data.setDodgeCooldownRemaining(30);
                 data.setComboIndex(0);
             }
             case STUNNED -> {
                 data.setState(CombatState.IDLE, 0);
                 data.setComboIndex(0);
+                data.setPosture(data.getMaxPosture());
             }
             case IDLE -> {
                 if (data.getComboIndex() > 0) {
@@ -274,7 +278,10 @@ public class CombatStateManager {
                 data.getParryCooldownRemaining(),
                 data.getDodgeCooldownRemaining(),
                 data.getStamina(),
-                data.getMaxStamina()
+                data.getMaxStamina(),
+                data.getPosture(),
+                data.getMaxPosture(),
+                data.getVentCooldownRemaining()
         );
         ServerPlayNetworking.send(player, payload);
     }
