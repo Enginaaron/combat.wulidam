@@ -16,6 +16,7 @@ import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.item.ItemStack;
 import combat.wulidam.network.c2s.TeleportDodgeC2SPayload;
 import combat.wulidam.network.s2c.TeleportDodgeS2CPayload;
@@ -51,7 +52,7 @@ public class SoulsLikeCombatClient implements ClientModInitializer {
     public void onInitializeClient() {
         registerS2CReceivers();
 
-        // Register keybind for toggling the SwordAndShield into sword + shield
+        // register keybind for toggling the sword and shield into sword + shield
         KeyBinding toggleKey = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "key.soulslikecombat.toggle_weapon",
                 InputUtil.Type.KEYSYM,
@@ -59,7 +60,7 @@ public class SoulsLikeCombatClient implements ClientModInitializer {
                 KeyBinding.Category.MISC
         ));
 
-        // Register keybind for dodging
+        // register keybind for dodging
         KeyBinding dodgeKey = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "key.soulslikecombat.dodge",
                 InputUtil.Type.KEYSYM,
@@ -78,11 +79,63 @@ public class SoulsLikeCombatClient implements ClientModInitializer {
         // register HUD renderer
         HudRenderCallback.EVENT.register(new StaminaHudRenderer());
 
-        // Client-side state to detect hotbar/main-hand changes
-        final ItemStack[] prevMain = new ItemStack[] { ItemStack.EMPTY };
+        // Init camera controller
+        combat.wulidam.client.CameraController.init(null);
+
+        // keybinds for rotating third-person camera left/right
+        KeyBinding camLeft = KeyBindingHelper.registerKeyBinding(new KeyBinding(
+                "key.soulslikecombat.cam_left",
+                InputUtil.Type.KEYSYM,
+                GLFW.GLFW_KEY_LEFT,
+                KeyBinding.Category.MISC
+        ));
+        KeyBinding camRight = KeyBindingHelper.registerKeyBinding(new KeyBinding(
+                "key.soulslikecombat.cam_right",
+                InputUtil.Type.KEYSYM,
+                GLFW.GLFW_KEY_RIGHT,
+                KeyBinding.Category.MISC
+        ));
+
+        // Camera rotation per tick while key held (degrees per tick)
+        final double rotationPerTick = 2.5; // ~50 deg/sec at 20 tps
+
+        // Toggle shoulder side keybind
+        KeyBinding camToggleSide = KeyBindingHelper.registerKeyBinding(new KeyBinding(
+                "key.soulslikecombat.cam_toggle_side",
+                InputUtil.Type.KEYSYM,
+                GLFW.GLFW_KEY_G,
+                KeyBinding.Category.MISC
+        ));
+
+        // extend existing client tick handler to react to camera keys
+        ClientTickEvents.END_CLIENT_TICK.register(client -> {
+            if (client.player == null) return;
+
+            // rotate camera while arrow keys held (only in third-person)
+            try {
+                if (combat.wulidam.client.CameraController.isThirdPerson(client)) {
+                    if (camLeft.isPressed()) {
+                        combat.wulidam.client.CameraController.rotateOrbitYaw(-rotationPerTick);
+                        SoulsLikeCombat.LOGGER.debug("CamLeft held: rotating {} deg", -rotationPerTick);
+                    }
+                    if (camRight.isPressed()) {
+                        combat.wulidam.client.CameraController.rotateOrbitYaw(rotationPerTick);
+                        SoulsLikeCombat.LOGGER.debug("CamRight held: rotating {} deg", rotationPerTick);
+                    }
+                    // toggle side when camToggleSide pressed
+                    while (camToggleSide.wasPressed()) {
+                        combat.wulidam.client.CameraController.toggleShoulderSide();
+                        SoulsLikeCombat.LOGGER.debug("Cam toggle shoulder side pressed. Now right? {}", combat.wulidam.client.CameraController.isShoulderRight());
+                    }
+                }
+            } catch (Throwable ignored) {}
+        });
+
+        // Client-side state to detect hotbar selection changes
+        final int[] prevSelectedSlot = new int[] { -1 };
         final int[] splitCooldown = new int[] { 0 };
 
-        // On client tick: handle toggle key and detect main-hand changes to request reassembly
+        // On client tick: handle toggle key and detect hotbar selection changes to request reassembly
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if (client.player == null) return;
 
@@ -91,7 +144,12 @@ public class SoulsLikeCombatClient implements ClientModInitializer {
                 ClientPlayNetworking.send(new ToggleWeaponC2SPayload());
                 // Temporary client-side cooldown to ignore immediate server-driven stack changes
                 splitCooldown[0] = 20;
-                prevMain[0] = client.player.getMainHandStack();
+                // Initialize prevSelectedSlot to the current selected slot to avoid immediate reassemble
+                try {
+                    prevSelectedSlot[0] = getSelectedSlot(client);
+                } catch (Throwable t) {
+                    prevSelectedSlot[0] = -1;
+                }
             }
 
             // Handle dodge-teleport key: send a 1-block left/right/back offset depending on A/D or none
@@ -120,9 +178,15 @@ public class SoulsLikeCombatClient implements ClientModInitializer {
             // Decrement cooldown
             if (splitCooldown[0] > 0) splitCooldown[0]--;
 
-            // Detect main-hand stack reference change (hotbar switch or selection change)
-            ItemStack currentMain = client.player.getMainHandStack();
-            if (prevMain[0] != currentMain) {
+            // Detect hotbar selection change
+            int currentSelected = -1;
+            try {
+                currentSelected = getSelectedSlot(client);
+            } catch (Throwable t) {
+                // fallback: leave -1
+            }
+
+            if (currentSelected != prevSelectedSlot[0]) {
                 // If not still within the immediate post-split cooldown, request reassemble
                 if (splitCooldown[0] == 0) {
                     // Search hotbar slots (0-8) for sword and shield and send indices to server
@@ -135,11 +199,48 @@ public class SoulsLikeCombatClient implements ClientModInitializer {
                     }
                     ClientPlayNetworking.send(new RequestReassembleC2SPayload(swordSlot, shieldSlot));
                 }
-                prevMain[0] = currentMain;
+                prevSelectedSlot[0] = currentSelected;
             }
         });
 
         SoulsLikeCombat.LOGGER.info("SoulsLikeCombat client initialized");
+    }
+
+    private static int getSelectedSlot(MinecraftClient client) {
+        try {
+            Object inv = client.player.getInventory();
+            if (inv == null) return -1;
+            Class<?> cls = inv.getClass();
+            // Try field 'selectedSlot'
+            try {
+                java.lang.reflect.Field f = cls.getDeclaredField("selectedSlot");
+                f.setAccessible(true);
+                return f.getInt(inv);
+            } catch (NoSuchFieldException ignored) {}
+
+            // Try method 'getSelectedSlot' or 'getSelected'
+            try {
+                java.lang.reflect.Method m = cls.getMethod("getSelectedSlot");
+                Object v = m.invoke(inv);
+                if (v instanceof Integer) return (Integer) v;
+            } catch (NoSuchMethodException ignored) {}
+            try {
+                java.lang.reflect.Method m = cls.getMethod("getSelected");
+                Object v = m.invoke(inv);
+                if (v instanceof Integer) return (Integer) v;
+            } catch (NoSuchMethodException ignored) {}
+
+            // Try field 'selected' (some mappings)
+            try {
+                java.lang.reflect.Field f = cls.getDeclaredField("selected");
+                f.setAccessible(true);
+                return f.getInt(inv);
+            } catch (NoSuchFieldException ignored) {}
+
+            return -1;
+        } catch (Throwable t) {
+            return -1;
+        }
     }
 
     private void registerS2CReceivers() {
@@ -163,6 +264,17 @@ public class SoulsLikeCombatClient implements ClientModInitializer {
                 // Phase 3 will use this to trigger screen effects
                 SoulsLikeCombat.LOGGER.debug("Client received hit result: type={}, damage={}",
                         payload.hitType(), payload.damageDealt());
+
+                // Trigger camera shake based on hit type
+                switch (payload.hitType()) {
+                    case combat.wulidam.network.s2c.HitResultS2CPayload.HIT_NORMAL ->
+                        combat.wulidam.client.CameraController.startShake(0.18, 2.2, 10);
+                    case combat.wulidam.network.s2c.HitResultS2CPayload.HIT_INTERRUPTED ->
+                        combat.wulidam.client.CameraController.startShake(0.28, 3.2, 14);
+                    case combat.wulidam.network.s2c.HitResultS2CPayload.HIT_PARRIED ->
+                        combat.wulidam.client.CameraController.startShake(0.12, 1.2, 8);
+                    default -> combat.wulidam.client.CameraController.startShake(0.10, 0.8, 6);
+                }
             });
         });
 

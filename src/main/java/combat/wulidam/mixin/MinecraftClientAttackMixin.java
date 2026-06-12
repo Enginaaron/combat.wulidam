@@ -27,6 +27,11 @@ public class MinecraftClientAttackMixin {
             return;
         }
 
+        // Play a tiny local camera nudge to give instant feedback on click
+        try {
+            combat.wulidam.client.CameraController.startShake(0.02, 0.6, 6);
+        } catch (Throwable ignored) {}
+
         if (!SoulsLikeCombatClient.getCurrentCombatState().canAct()) {
             cir.setReturnValue(false);
         }

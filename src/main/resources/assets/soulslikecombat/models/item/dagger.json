@@ -8,7 +8,7 @@
 	},
 	"elements": [
 		{
-			"name": "gloomsteel_knife_0",
+			"name": "dagger_0",
 			"from": [8.21875, 8.625, 7.96875],
 			"to": [8.46875, 8.75, 8.03125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -22,7 +22,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_1",
+			"name": "dagger_1",
 			"from": [8.09375, 8.375, 7.96875],
 			"to": [8.34375, 8.625, 8.03125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -36,7 +36,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_2",
+			"name": "dagger_2",
 			"from": [7.96875, 8, 7.96875],
 			"to": [8.09375, 8.5, 8.03125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -50,7 +50,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_3",
+			"name": "dagger_3",
 			"from": [7.84375, 7.875, 7.96875],
 			"to": [7.96875, 8.375, 8.03125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -64,7 +64,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_4",
+			"name": "dagger_4",
 			"from": [8.09375, 8.125, 7.96875],
 			"to": [8.21875, 8.375, 8.03125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -78,7 +78,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_5",
+			"name": "dagger_5",
 			"from": [7.71875, 7.625, 7.96875],
 			"to": [7.84375, 8.25, 8.03125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -92,7 +92,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_6",
+			"name": "dagger_6",
 			"from": [7.59375, 7.375, 7.96875],
 			"to": [7.71875, 8.125, 8.03125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -106,7 +106,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_7",
+			"name": "dagger_7",
 			"from": [8.09375, 7.75, 7.9375],
 			"to": [8.21875, 8.125, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -120,7 +120,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_8",
+			"name": "dagger_8",
 			"from": [7.96875, 7.125, 7.9375],
 			"to": [8.09375, 8, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -134,7 +134,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_9",
+			"name": "dagger_9",
 			"from": [7.46875, 6.125, 7.96875],
 			"to": [7.59375, 7.875, 8.03125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -148,7 +148,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_10",
+			"name": "dagger_10",
 			"from": [7.84375, 4.125, 7.9375],
 			"to": [7.96875, 7.875, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -162,7 +162,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_11",
+			"name": "dagger_11",
 			"from": [7.34375, 7, 7.96875],
 			"to": [7.46875, 7.625, 8.03125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -176,7 +176,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_12",
+			"name": "dagger_12",
 			"from": [7.71875, 4.25, 7.9375],
 			"to": [7.84375, 7.625, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -190,7 +190,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_13",
+			"name": "dagger_13",
 			"from": [7.21875, 7.125, 7.96875],
 			"to": [7.34375, 7.375, 8.03125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -204,7 +204,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_14",
+			"name": "dagger_14",
 			"from": [7.59375, 7.125, 7.9375],
 			"to": [7.71875, 7.375, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -218,7 +218,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_15",
+			"name": "dagger_15",
 			"from": [7.59375, 6.25, 7.96875],
 			"to": [7.71875, 7.125, 8.03125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -232,7 +232,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_16",
+			"name": "dagger_16",
 			"from": [7.34375, 6, 7.96875],
 			"to": [7.46875, 6.375, 8.03125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -246,7 +246,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_17",
+			"name": "dagger_17",
 			"from": [7.09375, 4.5, 7.96875],
 			"to": [7.34375, 6.25, 8.03125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -260,7 +260,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_18",
+			"name": "dagger_18",
 			"from": [7.59375, 4.375, 7.9375],
 			"to": [7.71875, 6.25, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -274,7 +274,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_19",
+			"name": "dagger_19",
 			"from": [7.46875, 4.375, 7.9375],
 			"to": [7.59375, 6.125, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -288,7 +288,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_20",
+			"name": "dagger_20",
 			"from": [7.34375, 4.375, 7.9375],
 			"to": [7.46875, 6, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -302,7 +302,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_21",
+			"name": "dagger_21",
 			"from": [8.59375, 3.875, 7.8125],
 			"to": [8.84375, 4.125, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -316,7 +316,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_22",
+			"name": "dagger_22",
 			"from": [8.84375, 4, 7.8125],
 			"to": [8.96875, 4.125, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -330,7 +330,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_23",
+			"name": "dagger_23",
 			"from": [8.46875, 3.625, 7.8125],
 			"to": [8.59375, 4, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -344,7 +344,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_24",
+			"name": "dagger_24",
 			"from": [8.34375, 3.5, 7.8125],
 			"to": [8.46875, 3.875, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -358,7 +358,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_25",
+			"name": "dagger_25",
 			"from": [8.59375, 3.75, 7.8125],
 			"to": [8.71875, 3.875, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -372,7 +372,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_26",
+			"name": "dagger_26",
 			"from": [6.96875, 4, 7.96875],
 			"to": [7.09375, 4.75, 8.03125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -386,7 +386,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_27",
+			"name": "dagger_27",
 			"from": [7.96875, 4, 7.9375],
 			"to": [8.09375, 4.75, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -400,7 +400,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_28",
+			"name": "dagger_28",
 			"from": [8.21875, 3.375, 7.8125],
 			"to": [8.34375, 3.75, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -414,7 +414,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_29",
+			"name": "dagger_29",
 			"from": [8.09375, 3.25, 7.8125],
 			"to": [8.21875, 3.625, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -428,7 +428,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_30",
+			"name": "dagger_30",
 			"from": [7.09375, 4, 7.96875],
 			"to": [7.21875, 4.5, 8.03125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -442,7 +442,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_31",
+			"name": "dagger_31",
 			"from": [7.21875, 4.375, 7.9375],
 			"to": [7.34375, 4.5, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -456,7 +456,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_32",
+			"name": "dagger_32",
 			"from": [7.96875, 3.125, 7.8125],
 			"to": [8.09375, 3.5, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -470,7 +470,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_33",
+			"name": "dagger_33",
 			"from": [7.21875, 4.125, 7.96875],
 			"to": [7.71875, 4.375, 8.03125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -484,7 +484,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_34",
+			"name": "dagger_34",
 			"from": [8.09375, 3.625, 7.9375],
 			"to": [8.21875, 4.375, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -498,7 +498,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_35",
+			"name": "dagger_35",
 			"from": [7.84375, 3, 7.8125],
 			"to": [7.96875, 3.375, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -512,7 +512,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_36",
+			"name": "dagger_36",
 			"from": [7.71875, 3.875, 7.96875],
 			"to": [7.84375, 4.25, 8.03125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -526,7 +526,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_37",
+			"name": "dagger_37",
 			"from": [8.21875, 3.875, 7.9375],
 			"to": [8.46875, 4.25, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -540,7 +540,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_38",
+			"name": "dagger_38",
 			"from": [7.71875, 2.875, 7.8125],
 			"to": [7.84375, 3.25, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -554,7 +554,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_39",
+			"name": "dagger_39",
 			"from": [7.59375, 4, 7.96875],
 			"to": [7.71875, 4.125, 8.03125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -568,7 +568,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_40",
+			"name": "dagger_40",
 			"from": [7.84375, 3.5, 7.96875],
 			"to": [7.96875, 4.125, 8.03125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -582,7 +582,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_41",
+			"name": "dagger_41",
 			"from": [8.46875, 4, 7.9375],
 			"to": [8.59375, 4.125, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -596,7 +596,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_42",
+			"name": "dagger_42",
 			"from": [7.59375, 2.625, 7.8125],
 			"to": [7.71875, 3.125, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -610,7 +610,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_43",
+			"name": "dagger_43",
 			"from": [7.96875, 3.5, 7.96875],
 			"to": [8.09375, 4, 8.03125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -624,7 +624,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_44",
+			"name": "dagger_44",
 			"from": [8.21875, 3.75, 7.9375],
 			"to": [8.34375, 3.875, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -638,7 +638,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_50",
+			"name": "dagger_50",
 			"from": [7.96875, 1.25, 7.9375],
 			"to": [8.09375, 1.5, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -652,7 +652,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_51",
+			"name": "dagger_51",
 			"from": [8.09375, 1.125, 7.9375],
 			"to": [8.21875, 1.375, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -666,7 +666,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_52",
+			"name": "dagger_52",
 			"from": [8.21875, 1, 7.9375],
 			"to": [8.34375, 1.25, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -680,7 +680,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_53",
+			"name": "dagger_53",
 			"from": [8.34375, 0.875, 7.9375],
 			"to": [8.84375, 1.125, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -694,7 +694,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_54",
+			"name": "dagger_54",
 			"from": [8.84375, 0.875, 7.9375],
 			"to": [9.09375, 1, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.21875, 0, 7.9375]},
@@ -708,7 +708,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_45",
+			"name": "dagger_45",
 			"from": [8.34375, 1.125, 7.8125],
 			"to": [8.46875, 3.5, 8.1875],
 			"faces": {
@@ -721,7 +721,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_46",
+			"name": "dagger_46",
 			"from": [8.21875, 2.25, 7.8125],
 			"to": [8.34375, 3.375, 8.1875],
 			"faces": {
@@ -734,7 +734,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_47",
+			"name": "dagger_47",
 			"from": [8.09375, 2.75, 7.8125],
 			"to": [8.21875, 3.25, 8.1875],
 			"faces": {
@@ -747,7 +747,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_48",
+			"name": "dagger_48",
 			"from": [8.46875, 1.125, 7.8125],
 			"to": [8.59375, 3.125, 8.1875],
 			"faces": {
@@ -760,7 +760,7 @@
 			}
 		},
 		{
-			"name": "gloomsteel_knife_49",
+			"name": "dagger_49",
 			"from": [8.59375, 1.125, 7.8125],
 			"to": [8.71875, 2.5, 8.1875],
 			"faces": {
@@ -817,7 +817,7 @@
 	},
 	"groups": [
 		{
-			"name": "gloomsteel_knife",
+			"name": "dagger",
 			"origin": [8.21875, 8, 15.9375],
 			"scope": 0,
 			"color": 0,
@@ -875,7 +875,7 @@
 			]
 		},
 		{
-			"name": "gloomsteel_knife",
+			"name": "dagger",
 			"origin": [8, 8, 8],
 			"scope": 0,
 			"color": 0,

@@ -153,9 +153,9 @@ public class PlayerCombatData {
             dodgeCooldownRemaining--;
         }
 
-        // Regenerate stamina (1% per second = 0.05% per tick)
+        // Regenerate stamina (3% per second = 0.15% per tick)
         if (stamina < maxStamina) {
-            stamina = Math.min(maxStamina, stamina + (maxStamina * 0.0005f));
+            stamina = Math.min(maxStamina, stamina + (maxStamina * 0.0015f));
         }
     }
 

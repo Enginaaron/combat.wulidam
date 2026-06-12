@@ -8,7 +8,7 @@
 	},
 	"elements": [
 		{
-			"name": "heavenly_partisan_0",
+			"name": "sword_0",
 			"from": [8, 17.25, 7.9375],
 			"to": [8.125, 17.75, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -22,7 +22,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_1",
+			"name": "sword_1",
 			"from": [7.875, 17, 7.9375],
 			"to": [8, 17.375, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -36,7 +36,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_2",
+			"name": "sword_2",
 			"from": [8.125, 17, 7.9375],
 			"to": [8.25, 17.375, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -50,7 +50,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_3",
+			"name": "sword_3",
 			"from": [7.75, 16.75, 7.9375],
 			"to": [7.875, 17.125, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -64,7 +64,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_4",
+			"name": "sword_4",
 			"from": [8.25, 16.75, 7.9375],
 			"to": [8.375, 17.125, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -78,7 +78,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_5",
+			"name": "sword_5",
 			"from": [7.625, 16.375, 7.9375],
 			"to": [7.75, 16.875, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -92,7 +92,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_6",
+			"name": "sword_6",
 			"from": [8.375, 16.375, 7.9375],
 			"to": [8.5, 16.875, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -106,7 +106,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_7",
+			"name": "sword_7",
 			"from": [8, 9.25, 7.8125],
 			"to": [8.125, 16.875, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -120,7 +120,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_8",
+			"name": "sword_8",
 			"from": [7.5, 16, 7.9375],
 			"to": [7.625, 16.5, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -134,7 +134,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_9",
+			"name": "sword_9",
 			"from": [8.5, 16, 7.9375],
 			"to": [8.625, 16.5, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -148,7 +148,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_10",
+			"name": "sword_10",
 			"from": [7.875, 15.125, 7.8125],
 			"to": [8, 16.5, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -162,7 +162,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_11",
+			"name": "sword_11",
 			"from": [8.125, 15.125, 7.8125],
 			"to": [8.25, 16.5, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -176,7 +176,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_12",
+			"name": "sword_12",
 			"from": [7.375, 15.75, 7.9375],
 			"to": [7.5, 16.125, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -190,7 +190,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_13",
+			"name": "sword_13",
 			"from": [8.625, 15.75, 7.9375],
 			"to": [8.75, 16.125, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -204,7 +204,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_14",
+			"name": "sword_14",
 			"from": [7.75, 15.25, 7.8125],
 			"to": [7.875, 16.125, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -218,7 +218,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_15",
+			"name": "sword_15",
 			"from": [8.25, 15.25, 7.8125],
 			"to": [8.375, 16.125, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -232,7 +232,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_16",
+			"name": "sword_16",
 			"from": [7.25, 15, 7.9375],
 			"to": [7.375, 15.875, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -246,7 +246,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_17",
+			"name": "sword_17",
 			"from": [8.75, 15, 7.9375],
 			"to": [8.875, 15.875, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -260,7 +260,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_18",
+			"name": "sword_18",
 			"from": [8, 16.875, 7.875],
 			"to": [8.125, 17.25, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -274,7 +274,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_19",
+			"name": "sword_19",
 			"from": [7.125, 15.5, 7.9375],
 			"to": [7.25, 15.75, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -288,7 +288,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_20",
+			"name": "sword_20",
 			"from": [8.875, 15.5, 7.9375],
 			"to": [9, 15.75, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -302,7 +302,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_21",
+			"name": "sword_21",
 			"from": [7.625, 15.375, 7.8125],
 			"to": [7.75, 15.75, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -316,7 +316,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_22",
+			"name": "sword_22",
 			"from": [8.375, 15.375, 7.8125],
 			"to": [8.5, 15.75, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -330,7 +330,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_23",
+			"name": "sword_23",
 			"from": [7.875, 16.5, 7.875],
 			"to": [8, 17, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -344,7 +344,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_24",
+			"name": "sword_24",
 			"from": [8.125, 16.5, 7.875],
 			"to": [8.25, 17, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -358,7 +358,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_25",
+			"name": "sword_25",
 			"from": [7.5, 15.5, 7.8125],
 			"to": [7.625, 15.625, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -372,7 +372,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_26",
+			"name": "sword_26",
 			"from": [8.5, 15.5, 7.8125],
 			"to": [8.625, 15.625, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -386,7 +386,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_27",
+			"name": "sword_27",
 			"from": [7.75, 16.125, 7.875],
 			"to": [7.875, 16.75, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -400,7 +400,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_28",
+			"name": "sword_28",
 			"from": [8.25, 16.125, 7.875],
 			"to": [8.375, 16.75, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -414,7 +414,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_29",
+			"name": "sword_29",
 			"from": [7.375, 14.375, 7.9375],
 			"to": [7.5, 15.125, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -428,7 +428,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_30",
+			"name": "sword_30",
 			"from": [8.625, 14.375, 7.9375],
 			"to": [8.75, 15.125, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -442,7 +442,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_31",
+			"name": "sword_31",
 			"from": [7.625, 15.75, 7.875],
 			"to": [7.75, 16.375, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -456,7 +456,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_32",
+			"name": "sword_32",
 			"from": [8.375, 15.75, 7.875],
 			"to": [8.5, 16.375, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -470,7 +470,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_33",
+			"name": "sword_33",
 			"from": [7.875, 8.75, 7.8125],
 			"to": [8, 15, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -484,7 +484,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_34",
+			"name": "sword_34",
 			"from": [8.125, 8.75, 7.8125],
 			"to": [8.25, 15, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -498,7 +498,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_35",
+			"name": "sword_35",
 			"from": [7.75, 8.5, 7.8125],
 			"to": [7.875, 14.875, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -512,7 +512,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_36",
+			"name": "sword_36",
 			"from": [8.25, 8.5, 7.8125],
 			"to": [8.375, 14.875, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -526,7 +526,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_37",
+			"name": "sword_37",
 			"from": [7.625, 14.625, 7.8125],
 			"to": [7.75, 14.75, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -540,7 +540,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_38",
+			"name": "sword_38",
 			"from": [8.375, 14.625, 7.8125],
 			"to": [8.5, 14.75, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -554,7 +554,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_39",
+			"name": "sword_39",
 			"from": [7.5, 15.625, 7.875],
 			"to": [7.625, 16, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -568,7 +568,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_40",
+			"name": "sword_40",
 			"from": [8.5, 15.625, 7.875],
 			"to": [8.625, 16, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -582,7 +582,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_41",
+			"name": "sword_41",
 			"from": [7.5, 11.75, 7.9375],
 			"to": [7.625, 14.5, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -596,7 +596,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_42",
+			"name": "sword_42",
 			"from": [8.5, 11.75, 7.9375],
 			"to": [8.625, 14.5, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -610,7 +610,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_43",
+			"name": "sword_43",
 			"from": [7.375, 15.125, 7.875],
 			"to": [7.5, 15.75, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -624,7 +624,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_44",
+			"name": "sword_44",
 			"from": [8.625, 15.125, 7.875],
 			"to": [8.75, 15.75, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -638,7 +638,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_45",
+			"name": "sword_45",
 			"from": [7.5, 14.5, 7.875],
 			"to": [7.625, 15.5, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -652,7 +652,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_46",
+			"name": "sword_46",
 			"from": [8.5, 14.5, 7.875],
 			"to": [8.625, 15.5, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -666,7 +666,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_47",
+			"name": "sword_47",
 			"from": [7.625, 14.75, 7.875],
 			"to": [7.75, 15.375, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -680,7 +680,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_48",
+			"name": "sword_48",
 			"from": [8.375, 14.75, 7.875],
 			"to": [8.5, 15.375, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -694,7 +694,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_49",
+			"name": "sword_49",
 			"from": [7.75, 14.875, 7.875],
 			"to": [7.875, 15.25, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -708,7 +708,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_50",
+			"name": "sword_50",
 			"from": [8.25, 14.875, 7.875],
 			"to": [8.375, 15.25, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -722,7 +722,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_51",
+			"name": "sword_51",
 			"from": [7.875, 15, 7.875],
 			"to": [8, 15.125, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -736,7 +736,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_52",
+			"name": "sword_52",
 			"from": [8.125, 15, 7.875],
 			"to": [8.25, 15.125, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -750,7 +750,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_53",
+			"name": "sword_53",
 			"from": [7.625, 10.5, 7.875],
 			"to": [7.75, 14.625, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -764,7 +764,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_54",
+			"name": "sword_54",
 			"from": [8.375, 10.5, 7.875],
 			"to": [8.5, 14.625, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -778,7 +778,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_55",
+			"name": "sword_55",
 			"from": [8, 6.75, 7.6875],
 			"to": [8.125, 8.25, 8.3125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -792,7 +792,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_56",
+			"name": "sword_56",
 			"from": [7.875, 6.25, 7.6875],
 			"to": [8, 7.75, 8.3125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -806,7 +806,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_57",
+			"name": "sword_57",
 			"from": [8.125, 6.25, 7.6875],
 			"to": [8.25, 7.75, 8.3125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -820,7 +820,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_58",
+			"name": "sword_58",
 			"from": [7.75, 6.125, 7.6875],
 			"to": [7.875, 7.625, 8.3125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -834,7 +834,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_59",
+			"name": "sword_59",
 			"from": [8.25, 6.125, 7.6875],
 			"to": [8.375, 7.625, 8.3125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -848,7 +848,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_60",
+			"name": "sword_60",
 			"from": [7.375, 10.25, 7.9375],
 			"to": [7.5, 11.875, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -862,7 +862,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_61",
+			"name": "sword_61",
 			"from": [8.625, 10.25, 7.9375],
 			"to": [8.75, 11.875, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -876,7 +876,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_62",
+			"name": "sword_62",
 			"from": [7.375, 6.625, 7.75],
 			"to": [7.5, 7.125, 8.25],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -890,7 +890,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_63",
+			"name": "sword_63",
 			"from": [8.625, 6.625, 7.75],
 			"to": [8.75, 7.125, 8.25],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -904,7 +904,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_64",
+			"name": "sword_64",
 			"from": [7.25, 6.625, 7.75],
 			"to": [7.375, 7, 8.25],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -918,7 +918,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_65",
+			"name": "sword_65",
 			"from": [8.75, 6.625, 7.75],
 			"to": [8.875, 7, 8.25],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -932,7 +932,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_66",
+			"name": "sword_66",
 			"from": [7.125, 6.75, 7.75],
 			"to": [7.25, 6.875, 8.25],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -946,7 +946,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_67",
+			"name": "sword_67",
 			"from": [7.5, 6.5, 7.75],
 			"to": [7.625, 6.875, 8.25],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -960,7 +960,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_68",
+			"name": "sword_68",
 			"from": [8, 4.5, 7.625],
 			"to": [8.125, 6.75, 8.375],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -974,7 +974,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_69",
+			"name": "sword_69",
 			"from": [8.5, 6.5, 7.75],
 			"to": [8.625, 6.875, 8.25],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -988,7 +988,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_70",
+			"name": "sword_70",
 			"from": [8.875, 6.75, 7.75],
 			"to": [9, 6.875, 8.25],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1002,7 +1002,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_71",
+			"name": "sword_71",
 			"from": [7.625, 6.375, 7.75],
 			"to": [7.75, 6.75, 8.25],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1016,7 +1016,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_72",
+			"name": "sword_72",
 			"from": [8.375, 6.375, 7.75],
 			"to": [8.5, 6.75, 8.25],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1030,7 +1030,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_73",
+			"name": "sword_73",
 			"from": [7.625, 8.25, 7.8125],
 			"to": [7.75, 10.5, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1044,7 +1044,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_74",
+			"name": "sword_74",
 			"from": [8.375, 8.25, 7.8125],
 			"to": [8.5, 10.5, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1058,7 +1058,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_75",
+			"name": "sword_75",
 			"from": [7.25, 9.125, 7.9375],
 			"to": [7.375, 10.375, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1072,7 +1072,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_76",
+			"name": "sword_76",
 			"from": [8.75, 9.125, 7.9375],
 			"to": [8.875, 10.375, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1086,7 +1086,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_77",
+			"name": "sword_77",
 			"from": [7.5, 9, 7.875],
 			"to": [7.625, 11.75, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1100,7 +1100,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_78",
+			"name": "sword_78",
 			"from": [8.5, 9, 7.875],
 			"to": [8.625, 11.75, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1114,7 +1114,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_79",
+			"name": "sword_79",
 			"from": [7, 6.25, 7.6875],
 			"to": [7.25, 6.75, 8.3125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1128,7 +1128,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_80",
+			"name": "sword_80",
 			"from": [7.875, 4.625, 7.625],
 			"to": [8, 6.25, 8.375],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1142,7 +1142,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_81",
+			"name": "sword_81",
 			"from": [8.125, 4.625, 7.625],
 			"to": [8.25, 6.25, 8.375],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1156,7 +1156,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_82",
+			"name": "sword_82",
 			"from": [8.875, 6.25, 7.6875],
 			"to": [9.125, 6.75, 8.3125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1170,7 +1170,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_83",
+			"name": "sword_83",
 			"from": [6.875, 6.375, 7.6875],
 			"to": [7, 6.625, 8.3125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1184,7 +1184,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_84",
+			"name": "sword_84",
 			"from": [7.75, 4.75, 7.625],
 			"to": [7.875, 6.125, 8.375],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1198,7 +1198,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_85",
+			"name": "sword_85",
 			"from": [8.25, 4.75, 7.625],
 			"to": [8.375, 6.125, 8.375],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1212,7 +1212,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_86",
+			"name": "sword_86",
 			"from": [9.125, 6.375, 7.6875],
 			"to": [9.25, 6.625, 8.3125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1226,7 +1226,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_87",
+			"name": "sword_87",
 			"from": [7.25, 6, 7.6875],
 			"to": [7.375, 6.375, 8.3125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1240,7 +1240,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_88",
+			"name": "sword_88",
 			"from": [8.75, 6, 7.6875],
 			"to": [8.875, 6.375, 8.3125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1254,7 +1254,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_89",
+			"name": "sword_89",
 			"from": [7.125, 6.125, 7.6875],
 			"to": [7.25, 6.25, 8.3125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1268,7 +1268,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_90",
+			"name": "sword_90",
 			"from": [7.375, 5.875, 7.6875],
 			"to": [7.5, 6.25, 8.3125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1282,7 +1282,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_91",
+			"name": "sword_91",
 			"from": [8.625, 5.875, 7.6875],
 			"to": [8.75, 6.25, 8.3125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1296,7 +1296,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_92",
+			"name": "sword_92",
 			"from": [8.875, 6.125, 7.6875],
 			"to": [9, 6.25, 8.3125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1310,7 +1310,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_93",
+			"name": "sword_93",
 			"from": [7.5, 5.75, 7.6875],
 			"to": [7.625, 6.125, 8.3125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1324,7 +1324,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_94",
+			"name": "sword_94",
 			"from": [8.5, 5.75, 7.6875],
 			"to": [8.625, 6.125, 8.3125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1338,7 +1338,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_95",
+			"name": "sword_95",
 			"from": [5.625, 6.625, 7.75],
 			"to": [6.25, 6.75, 8.25],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1352,7 +1352,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_96",
+			"name": "sword_96",
 			"from": [6.5, 6.375, 7.8125],
 			"to": [6.875, 6.5, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1366,7 +1366,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_97",
+			"name": "sword_97",
 			"from": [9.25, 6.25, 7.8125],
 			"to": [9.5, 6.5, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1380,7 +1380,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_98",
+			"name": "sword_98",
 			"from": [9.5, 6.375, 7.8125],
 			"to": [9.625, 6.5, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1394,7 +1394,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_99",
+			"name": "sword_99",
 			"from": [9.875, 6.5, 7.75],
 			"to": [10.375, 6.75, 8.25],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1408,7 +1408,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_100",
+			"name": "sword_100",
 			"from": [10.375, 6.625, 7.75],
 			"to": [10.5, 6.75, 8.25],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1422,7 +1422,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_101",
+			"name": "sword_101",
 			"from": [5.75, 6.5, 7.75],
 			"to": [6.375, 6.625, 8.25],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1436,7 +1436,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_102",
+			"name": "sword_102",
 			"from": [6.625, 6.25, 7.8125],
 			"to": [7, 6.375, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1450,7 +1450,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_103",
+			"name": "sword_103",
 			"from": [9.125, 6, 7.8125],
 			"to": [9.25, 6.375, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1464,7 +1464,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_104",
+			"name": "sword_104",
 			"from": [9.75, 5.875, 7.75],
 			"to": [9.875, 6.625, 8.25],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1478,7 +1478,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_105",
+			"name": "sword_105",
 			"from": [7.125, 8.75, 7.9375],
 			"to": [7.25, 9.25, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1492,7 +1492,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_106",
+			"name": "sword_106",
 			"from": [8.875, 8.75, 7.9375],
 			"to": [9, 9.25, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1506,7 +1506,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_107",
+			"name": "sword_107",
 			"from": [6, 6.375, 7.75],
 			"to": [6.5, 6.5, 8.25],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1520,7 +1520,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_108",
+			"name": "sword_108",
 			"from": [6.75, 6.125, 7.8125],
 			"to": [7, 6.25, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1534,7 +1534,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_109",
+			"name": "sword_109",
 			"from": [9.25, 6.125, 7.8125],
 			"to": [9.375, 6.25, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1548,7 +1548,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_110",
+			"name": "sword_110",
 			"from": [9.625, 5.875, 7.75],
 			"to": [9.75, 6.5, 8.25],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1562,7 +1562,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_111",
+			"name": "sword_111",
 			"from": [9.875, 6.375, 7.75],
 			"to": [10.125, 6.5, 8.25],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1576,7 +1576,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_112",
+			"name": "sword_112",
 			"from": [6.125, 5.875, 7.75],
 			"to": [6.625, 6.375, 8.25],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1590,7 +1590,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_113",
+			"name": "sword_113",
 			"from": [6.875, 6, 7.8125],
 			"to": [7, 6.125, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1604,7 +1604,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_114",
+			"name": "sword_114",
 			"from": [9.5, 5.875, 7.75],
 			"to": [9.625, 6.375, 8.25],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1618,7 +1618,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_115",
+			"name": "sword_115",
 			"from": [9.875, 5.875, 7.75],
 			"to": [10, 6.375, 8.25],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1632,7 +1632,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_116",
+			"name": "sword_116",
 			"from": [7.5, 6.875, 7.8125],
 			"to": [7.625, 9, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1646,7 +1646,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_117",
+			"name": "sword_117",
 			"from": [8.5, 6.875, 7.8125],
 			"to": [8.625, 9, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1660,7 +1660,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_118",
+			"name": "sword_118",
 			"from": [6.625, 5.875, 7.75],
 			"to": [6.75, 6.25, 8.25],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1674,7 +1674,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_119",
+			"name": "sword_119",
 			"from": [9.375, 5.875, 7.75],
 			"to": [9.5, 6.25, 8.25],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1688,7 +1688,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_120",
+			"name": "sword_120",
 			"from": [7, 8.5, 7.9375],
 			"to": [7.125, 8.875, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1702,7 +1702,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_121",
+			"name": "sword_121",
 			"from": [9, 8.5, 7.9375],
 			"to": [9.125, 8.875, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1716,7 +1716,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_122",
+			"name": "sword_122",
 			"from": [7.375, 8.5, 7.875],
 			"to": [7.5, 10.25, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1730,7 +1730,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_123",
+			"name": "sword_123",
 			"from": [8.625, 8.5, 7.875],
 			"to": [8.75, 10.25, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1744,7 +1744,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_124",
+			"name": "sword_124",
 			"from": [6.75, 5.875, 7.75],
 			"to": [6.875, 6.125, 8.25],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1758,7 +1758,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_125",
+			"name": "sword_125",
 			"from": [9.25, 5.875, 7.75],
 			"to": [9.375, 6.125, 8.25],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1772,7 +1772,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_126",
+			"name": "sword_126",
 			"from": [6.875, 5.875, 7.75],
 			"to": [7.125, 6, 8.25],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1786,7 +1786,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_127",
+			"name": "sword_127",
 			"from": [9, 5.875, 7.75],
 			"to": [9.25, 6, 8.25],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1800,7 +1800,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_128",
+			"name": "sword_128",
 			"from": [6.875, 8.375, 7.9375],
 			"to": [7, 8.625, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1814,7 +1814,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_129",
+			"name": "sword_129",
 			"from": [9.125, 8.375, 7.9375],
 			"to": [9.25, 8.625, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1828,7 +1828,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_130",
+			"name": "sword_130",
 			"from": [6.75, 8, 7.9375],
 			"to": [6.875, 8.5, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1842,7 +1842,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_131",
+			"name": "sword_131",
 			"from": [9.25, 8, 7.9375],
 			"to": [9.375, 8.5, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1856,7 +1856,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_132",
+			"name": "sword_132",
 			"from": [7.375, 7.125, 7.8125],
 			"to": [7.5, 8.5, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1870,7 +1870,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_133",
+			"name": "sword_133",
 			"from": [8.625, 7.125, 7.8125],
 			"to": [8.75, 8.5, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1884,7 +1884,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_134",
+			"name": "sword_134",
 			"from": [6.5, 8.25, 7.9375],
 			"to": [6.75, 8.375, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1898,7 +1898,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_135",
+			"name": "sword_135",
 			"from": [9.375, 8.25, 7.9375],
 			"to": [9.625, 8.375, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1912,7 +1912,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_136",
+			"name": "sword_136",
 			"from": [7.25, 7.875, 7.8125],
 			"to": [7.375, 8.375, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1926,7 +1926,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_137",
+			"name": "sword_137",
 			"from": [8.75, 7.875, 7.8125],
 			"to": [8.875, 8.375, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1940,7 +1940,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_138",
+			"name": "sword_138",
 			"from": [6.625, 8.125, 7.9375],
 			"to": [6.75, 8.25, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1954,7 +1954,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_139",
+			"name": "sword_139",
 			"from": [9.375, 8.125, 7.9375],
 			"to": [9.5, 8.25, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1968,7 +1968,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_140",
+			"name": "sword_140",
 			"from": [7, 8.125, 7.8125],
 			"to": [7.25, 8.25, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1982,7 +1982,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_141",
+			"name": "sword_141",
 			"from": [8.875, 8.125, 7.8125],
 			"to": [9.125, 8.25, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -1996,7 +1996,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_142",
+			"name": "sword_142",
 			"from": [6.875, 7.875, 7.9375],
 			"to": [7, 8.125, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2010,7 +2010,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_143",
+			"name": "sword_143",
 			"from": [9.125, 7.875, 7.9375],
 			"to": [9.25, 8.125, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2024,7 +2024,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_144",
+			"name": "sword_144",
 			"from": [7, 7.125, 7.9375],
 			"to": [7.125, 8, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2038,7 +2038,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_145",
+			"name": "sword_145",
 			"from": [9, 7.125, 7.9375],
 			"to": [9.125, 8, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2052,7 +2052,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_146",
+			"name": "sword_146",
 			"from": [7.625, 6.75, 7.8125],
 			"to": [7.75, 8, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2066,7 +2066,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_147",
+			"name": "sword_147",
 			"from": [8.375, 6.75, 7.8125],
 			"to": [8.5, 8, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2080,7 +2080,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_148",
+			"name": "sword_148",
 			"from": [5.75, 5.5, 7.8125],
 			"to": [6.75, 5.875, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2094,7 +2094,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_149",
+			"name": "sword_149",
 			"from": [6.75, 5.75, 7.8125],
 			"to": [7, 5.875, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2108,7 +2108,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_150",
+			"name": "sword_150",
 			"from": [9.125, 5.75, 7.8125],
 			"to": [10.375, 5.875, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2122,7 +2122,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_151",
+			"name": "sword_151",
 			"from": [7.25, 8.375, 7.875],
 			"to": [7.375, 9.125, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2136,7 +2136,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_152",
+			"name": "sword_152",
 			"from": [8.75, 8.375, 7.875],
 			"to": [8.875, 9.125, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2150,7 +2150,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_153",
+			"name": "sword_153",
 			"from": [5.625, 5.375, 7.8125],
 			"to": [5.75, 5.75, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2164,7 +2164,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_154",
+			"name": "sword_154",
 			"from": [6.75, 5.625, 7.8125],
 			"to": [6.875, 5.75, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2178,7 +2178,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_155",
+			"name": "sword_155",
 			"from": [7.25, 5.5, 7.8125],
 			"to": [7.5, 5.75, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2192,7 +2192,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_156",
+			"name": "sword_156",
 			"from": [8.625, 5.5, 7.8125],
 			"to": [8.875, 5.75, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2206,7 +2206,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_157",
+			"name": "sword_157",
 			"from": [9.25, 5.625, 7.8125],
 			"to": [10.5, 5.75, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2220,7 +2220,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_158",
+			"name": "sword_158",
 			"from": [5.5, 5.25, 7.8125],
 			"to": [5.625, 5.625, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2234,7 +2234,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_159",
+			"name": "sword_159",
 			"from": [7.125, 5.5, 7.8125],
 			"to": [7.25, 5.625, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2248,7 +2248,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_160",
+			"name": "sword_160",
 			"from": [7.5, 5.125, 7.8125],
 			"to": [7.625, 5.625, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2262,7 +2262,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_161",
+			"name": "sword_161",
 			"from": [8.5, 5.125, 7.8125],
 			"to": [8.625, 5.625, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2276,7 +2276,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_162",
+			"name": "sword_162",
 			"from": [8.875, 5.5, 7.8125],
 			"to": [9, 5.625, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2290,7 +2290,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_164",
+			"name": "sword_164",
 			"from": [5.375, 5.125, 7.8125],
 			"to": [5.5, 5.5, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2304,7 +2304,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_165",
+			"name": "sword_165",
 			"from": [7.375, 5.375, 7.8125],
 			"to": [7.5, 5.5, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2318,7 +2318,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_166",
+			"name": "sword_166",
 			"from": [7.625, 5.25, 7.8125],
 			"to": [7.75, 5.5, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2332,7 +2332,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_167",
+			"name": "sword_167",
 			"from": [8.375, 5.25, 7.8125],
 			"to": [8.5, 5.5, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2346,7 +2346,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_168",
+			"name": "sword_168",
 			"from": [8.625, 5.375, 7.8125],
 			"to": [8.75, 5.5, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2360,7 +2360,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_169",
+			"name": "sword_169",
 			"from": [10.375, 5.375, 7.8125],
 			"to": [10.75, 5.5, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2374,7 +2374,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_170",
+			"name": "sword_170",
 			"from": [7.125, 8.25, 7.875],
 			"to": [7.25, 8.75, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2388,7 +2388,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_171",
+			"name": "sword_171",
 			"from": [8.875, 8.25, 7.875],
 			"to": [9, 8.75, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2402,7 +2402,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_172",
+			"name": "sword_172",
 			"from": [5.25, 5, 7.8125],
 			"to": [5.375, 5.375, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2416,7 +2416,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_173",
+			"name": "sword_173",
 			"from": [10.5, 5.25, 7.8125],
 			"to": [10.875, 5.375, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2430,7 +2430,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_174",
+			"name": "sword_174",
 			"from": [5.125, 4.875, 7.8125],
 			"to": [5.25, 5.25, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2444,7 +2444,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_175",
+			"name": "sword_175",
 			"from": [7.375, 5, 7.8125],
 			"to": [7.5, 5.25, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2458,7 +2458,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_176",
+			"name": "sword_176",
 			"from": [8.625, 5, 7.8125],
 			"to": [8.75, 5.25, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2472,7 +2472,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_177",
+			"name": "sword_177",
 			"from": [10.625, 5.125, 7.8125],
 			"to": [11, 5.25, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2486,7 +2486,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_178",
+			"name": "sword_178",
 			"from": [7, 8.25, 7.875],
 			"to": [7.125, 8.5, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2500,7 +2500,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_179",
+			"name": "sword_179",
 			"from": [9, 8.25, 7.875],
 			"to": [9.125, 8.5, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2514,7 +2514,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_180",
+			"name": "sword_180",
 			"from": [5, 4.75, 7.8125],
 			"to": [5.125, 5.125, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2528,7 +2528,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_181",
+			"name": "sword_181",
 			"from": [7.25, 5, 7.8125],
 			"to": [7.375, 5.125, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2542,7 +2542,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_182",
+			"name": "sword_182",
 			"from": [8.75, 5, 7.8125],
 			"to": [8.875, 5.125, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2556,7 +2556,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_183",
+			"name": "sword_183",
 			"from": [10.75, 5, 7.8125],
 			"to": [11.125, 5.125, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2570,7 +2570,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_184",
+			"name": "sword_184",
 			"from": [6.875, 8.125, 7.875],
 			"to": [7, 8.375, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2584,7 +2584,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_185",
+			"name": "sword_185",
 			"from": [9.125, 8.125, 7.875],
 			"to": [9.25, 8.375, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2598,7 +2598,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_186",
+			"name": "sword_186",
 			"from": [8, 8.25, 7.75],
 			"to": [8.125, 9.25, 8.25],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2612,7 +2612,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_187",
+			"name": "sword_187",
 			"from": [4.875, 4.625, 7.8125],
 			"to": [5, 5, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2626,7 +2626,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_188",
+			"name": "sword_188",
 			"from": [10.875, 4.875, 7.8125],
 			"to": [11.25, 5, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2640,7 +2640,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_189",
+			"name": "sword_189",
 			"from": [4.75, 4.5, 7.8125],
 			"to": [4.875, 4.875, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2654,7 +2654,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_190",
+			"name": "sword_190",
 			"from": [7, 5.625, 7.6875],
 			"to": [7.25, 5.875, 8.3125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2668,7 +2668,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_191",
+			"name": "sword_191",
 			"from": [7.25, 5.75, 7.6875],
 			"to": [7.375, 5.875, 8.3125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2682,7 +2682,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_192",
+			"name": "sword_192",
 			"from": [8.75, 5.75, 7.6875],
 			"to": [9.125, 5.875, 8.3125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2696,7 +2696,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_193",
+			"name": "sword_193",
 			"from": [11, 4.75, 7.8125],
 			"to": [11.375, 4.875, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2710,7 +2710,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_194",
+			"name": "sword_194",
 			"from": [7, 8, 7.875],
 			"to": [7.25, 8.125, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2724,7 +2724,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_195",
+			"name": "sword_195",
 			"from": [8.875, 8, 7.875],
 			"to": [9.125, 8.125, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2738,7 +2738,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_196",
+			"name": "sword_196",
 			"from": [4.625, 4.375, 7.8125],
 			"to": [4.75, 4.75, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2752,7 +2752,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_197",
+			"name": "sword_197",
 			"from": [6.875, 5.375, 7.6875],
 			"to": [7, 5.75, 8.3125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2766,7 +2766,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_198",
+			"name": "sword_198",
 			"from": [8.875, 5.625, 7.6875],
 			"to": [9.25, 5.75, 8.3125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2780,7 +2780,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_199",
+			"name": "sword_199",
 			"from": [11.125, 4.625, 7.8125],
 			"to": [11.5, 4.75, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2794,7 +2794,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_200",
+			"name": "sword_200",
 			"from": [7.125, 6.875, 7.875],
 			"to": [7.25, 8, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2808,7 +2808,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_201",
+			"name": "sword_201",
 			"from": [8.875, 6.875, 7.875],
 			"to": [9, 8, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2822,7 +2822,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_202",
+			"name": "sword_202",
 			"from": [4.5, 4.25, 7.8125],
 			"to": [4.625, 4.625, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2836,7 +2836,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_203",
+			"name": "sword_203",
 			"from": [6.75, 5.25, 7.6875],
 			"to": [6.875, 5.625, 8.3125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2850,7 +2850,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_204",
+			"name": "sword_204",
 			"from": [7, 5.5, 7.6875],
 			"to": [7.125, 5.625, 8.3125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2864,7 +2864,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_208",
+			"name": "sword_208",
 			"from": [11.25, 4.5, 7.8125],
 			"to": [11.625, 4.625, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2878,7 +2878,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_209",
+			"name": "sword_209",
 			"from": [7.25, 7, 7.875],
 			"to": [7.375, 7.875, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2892,7 +2892,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_210",
+			"name": "sword_210",
 			"from": [8.75, 7, 7.875],
 			"to": [8.875, 7.875, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2906,7 +2906,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_211",
+			"name": "sword_211",
 			"from": [7.875, 7.75, 7.75],
 			"to": [8, 8.75, 8.25],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2920,7 +2920,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_212",
+			"name": "sword_212",
 			"from": [8.125, 7.75, 7.75],
 			"to": [8.25, 8.75, 8.25],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2934,7 +2934,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_213",
+			"name": "sword_213",
 			"from": [4.375, 4.125, 7.8125],
 			"to": [4.5, 4.5, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2948,7 +2948,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_214",
+			"name": "sword_214",
 			"from": [6.625, 5.125, 7.6875],
 			"to": [6.75, 5.5, 8.3125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2962,7 +2962,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_216",
+			"name": "sword_216",
 			"from": [9.125, 5.375, 7.6875],
 			"to": [9.5, 5.5, 8.3125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2976,7 +2976,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_217",
+			"name": "sword_217",
 			"from": [11.375, 4.375, 7.8125],
 			"to": [11.75, 4.5, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -2990,7 +2990,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_218",
+			"name": "sword_218",
 			"from": [4.25, 4, 7.8125],
 			"to": [4.375, 4.375, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3004,7 +3004,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_219",
+			"name": "sword_219",
 			"from": [6.5, 5, 7.6875],
 			"to": [6.625, 5.375, 8.3125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3018,7 +3018,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_220",
+			"name": "sword_220",
 			"from": [9.25, 5.25, 7.6875],
 			"to": [9.625, 5.375, 8.3125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3032,7 +3032,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_221",
+			"name": "sword_221",
 			"from": [11.5, 4.25, 7.8125],
 			"to": [11.875, 4.375, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3046,7 +3046,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_222",
+			"name": "sword_222",
 			"from": [7.75, 7.625, 7.75],
 			"to": [7.875, 8.5, 8.25],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3060,7 +3060,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_223",
+			"name": "sword_223",
 			"from": [8.25, 7.625, 7.75],
 			"to": [8.375, 8.5, 8.25],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3074,7 +3074,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_224",
+			"name": "sword_224",
 			"from": [4.125, 4, 7.8125],
 			"to": [4.25, 4.25, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3088,7 +3088,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_225",
+			"name": "sword_225",
 			"from": [6.375, 4.875, 7.6875],
 			"to": [6.5, 5.25, 8.3125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3102,7 +3102,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_226",
+			"name": "sword_226",
 			"from": [9.375, 5.125, 7.6875],
 			"to": [9.75, 5.25, 8.3125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3116,7 +3116,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_227",
+			"name": "sword_227",
 			"from": [11.625, 4.125, 7.8125],
 			"to": [12, 4.25, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3130,7 +3130,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_228",
+			"name": "sword_228",
 			"from": [4, 4, 7.8125],
 			"to": [4.125, 4.125, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3144,7 +3144,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_229",
+			"name": "sword_229",
 			"from": [6.25, 4.75, 7.6875],
 			"to": [6.375, 5.125, 8.3125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3158,7 +3158,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_230",
+			"name": "sword_230",
 			"from": [9.5, 5, 7.6875],
 			"to": [9.875, 5.125, 8.3125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3172,7 +3172,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_231",
+			"name": "sword_231",
 			"from": [11.75, 4, 7.8125],
 			"to": [12.125, 4.125, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3186,7 +3186,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_232",
+			"name": "sword_232",
 			"from": [7.625, 8, 7.75],
 			"to": [7.75, 8.25, 8.25],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3200,7 +3200,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_233",
+			"name": "sword_233",
 			"from": [8.375, 8, 7.75],
 			"to": [8.5, 8.25, 8.25],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3214,7 +3214,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_234",
+			"name": "sword_234",
 			"from": [6.125, 4.75, 7.6875],
 			"to": [6.25, 5, 8.3125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3228,7 +3228,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_235",
+			"name": "sword_235",
 			"from": [9.625, 4.875, 7.6875],
 			"to": [10, 5, 8.3125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3242,7 +3242,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_236",
+			"name": "sword_236",
 			"from": [6, 4.75, 7.6875],
 			"to": [6.125, 4.875, 8.3125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3256,7 +3256,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_237",
+			"name": "sword_237",
 			"from": [9.75, 4.75, 7.6875],
 			"to": [10.125, 4.875, 8.3125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3270,7 +3270,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_238",
+			"name": "sword_238",
 			"from": [7, 6.75, 7.875],
 			"to": [7.125, 7.125, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3284,7 +3284,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_239",
+			"name": "sword_239",
 			"from": [9, 6.75, 7.875],
 			"to": [9.125, 7.125, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3298,7 +3298,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_240",
+			"name": "sword_240",
 			"from": [6.875, 6.625, 7.875],
 			"to": [7, 7, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3312,7 +3312,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_241",
+			"name": "sword_241",
 			"from": [9.125, 6.625, 7.875],
 			"to": [9.25, 7, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3326,7 +3326,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_242",
+			"name": "sword_242",
 			"from": [7.25, 6.375, 7.8125],
 			"to": [7.5, 6.625, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3340,7 +3340,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_243",
+			"name": "sword_243",
 			"from": [8.625, 6.375, 7.8125],
 			"to": [8.875, 6.625, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3354,7 +3354,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_244",
+			"name": "sword_244",
 			"from": [5.75, 5.125, 7.875],
 			"to": [6.125, 5.5, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3368,7 +3368,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_245",
+			"name": "sword_245",
 			"from": [6.125, 5.375, 7.875],
 			"to": [6.375, 5.5, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3382,7 +3382,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_246",
+			"name": "sword_246",
 			"from": [7.5, 6.125, 7.8125],
 			"to": [7.625, 6.5, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3396,7 +3396,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_247",
+			"name": "sword_247",
 			"from": [8.5, 6.125, 7.8125],
 			"to": [8.625, 6.5, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3410,7 +3410,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_248",
+			"name": "sword_248",
 			"from": [9.75, 5.375, 7.875],
 			"to": [10.375, 5.5, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3424,7 +3424,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_249",
+			"name": "sword_249",
 			"from": [6.75, 6.5, 7.875],
 			"to": [6.875, 6.75, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3438,7 +3438,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_250",
+			"name": "sword_250",
 			"from": [9.25, 6.5, 7.875],
 			"to": [9.375, 6.75, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3452,7 +3452,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_251",
+			"name": "sword_251",
 			"from": [5.625, 4.75, 7.875],
 			"to": [5.75, 5.375, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3466,7 +3466,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_252",
+			"name": "sword_252",
 			"from": [6.125, 5.25, 7.875],
 			"to": [6.25, 5.375, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3480,7 +3480,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_253",
+			"name": "sword_253",
 			"from": [7.375, 6.25, 7.8125],
 			"to": [7.5, 6.375, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3494,7 +3494,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_254",
+			"name": "sword_254",
 			"from": [7.625, 5.5, 7.8125],
 			"to": [7.75, 6.375, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3508,7 +3508,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_255",
+			"name": "sword_255",
 			"from": [8.375, 5.5, 7.8125],
 			"to": [8.5, 6.375, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3522,7 +3522,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_256",
+			"name": "sword_256",
 			"from": [8.625, 6.25, 7.8125],
 			"to": [8.75, 6.375, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3536,7 +3536,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_257",
+			"name": "sword_257",
 			"from": [9.875, 5.25, 7.875],
 			"to": [10.5, 5.375, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3550,7 +3550,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_258",
+			"name": "sword_258",
 			"from": [6.625, 6.5, 7.875],
 			"to": [6.75, 6.625, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3564,7 +3564,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_259",
+			"name": "sword_259",
 			"from": [9.375, 6.5, 7.875],
 			"to": [9.5, 6.625, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3578,7 +3578,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_260",
+			"name": "sword_260",
 			"from": [5.5, 4.625, 7.875],
 			"to": [5.625, 5.25, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3592,7 +3592,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_261",
+			"name": "sword_261",
 			"from": [7, 6, 7.8125],
 			"to": [7.125, 6.25, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3606,7 +3606,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_262",
+			"name": "sword_262",
 			"from": [9, 6, 7.8125],
 			"to": [9.125, 6.25, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3620,7 +3620,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_263",
+			"name": "sword_263",
 			"from": [10, 5.125, 7.875],
 			"to": [10.625, 5.25, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3634,7 +3634,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_264",
+			"name": "sword_264",
 			"from": [5.375, 4.5, 7.875],
 			"to": [5.5, 5.125, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3648,7 +3648,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_265",
+			"name": "sword_265",
 			"from": [5.75, 5, 7.875],
 			"to": [6, 5.125, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3662,7 +3662,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_266",
+			"name": "sword_266",
 			"from": [7.125, 5.875, 7.8125],
 			"to": [7.25, 6.125, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3676,7 +3676,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_267",
+			"name": "sword_267",
 			"from": [8.875, 5.875, 7.8125],
 			"to": [9, 6.125, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3690,7 +3690,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_268",
+			"name": "sword_268",
 			"from": [10.125, 5, 7.875],
 			"to": [10.75, 5.125, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3704,7 +3704,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_269",
+			"name": "sword_269",
 			"from": [5.25, 4.375, 7.875],
 			"to": [5.375, 5, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3718,7 +3718,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_270",
+			"name": "sword_270",
 			"from": [5.75, 4.875, 7.875],
 			"to": [5.875, 5, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3732,7 +3732,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_271",
+			"name": "sword_271",
 			"from": [7.25, 5.875, 7.8125],
 			"to": [7.375, 6, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3746,7 +3746,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_272",
+			"name": "sword_272",
 			"from": [8.75, 5.875, 7.8125],
 			"to": [8.875, 6, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3760,7 +3760,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_273",
+			"name": "sword_273",
 			"from": [10.25, 4.875, 7.875],
 			"to": [10.875, 5, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3774,7 +3774,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_274",
+			"name": "sword_274",
 			"from": [5.125, 4.375, 7.875],
 			"to": [5.25, 4.875, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3788,7 +3788,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_275",
+			"name": "sword_275",
 			"from": [7.375, 5.75, 7.8125],
 			"to": [7.5, 5.875, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3802,7 +3802,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_276",
+			"name": "sword_276",
 			"from": [8.625, 5.75, 7.8125],
 			"to": [8.75, 5.875, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3816,7 +3816,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_277",
+			"name": "sword_277",
 			"from": [10.375, 4.75, 7.875],
 			"to": [11, 4.875, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3830,7 +3830,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_278",
+			"name": "sword_278",
 			"from": [5, 4.375, 7.875],
 			"to": [5.125, 4.75, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3844,7 +3844,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_279",
+			"name": "sword_279",
 			"from": [7.5, 5.625, 7.8125],
 			"to": [7.625, 5.75, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3858,7 +3858,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_280",
+			"name": "sword_280",
 			"from": [8.5, 5.625, 7.8125],
 			"to": [8.625, 5.75, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3872,7 +3872,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_281",
+			"name": "sword_281",
 			"from": [10.5, 4.625, 7.875],
 			"to": [11.125, 4.75, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3886,7 +3886,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_282",
+			"name": "sword_282",
 			"from": [4.875, 4.25, 7.875],
 			"to": [5, 4.625, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3900,7 +3900,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_283",
+			"name": "sword_283",
 			"from": [10.625, 4.5, 7.875],
 			"to": [11.25, 4.625, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3914,7 +3914,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_284",
+			"name": "sword_284",
 			"from": [4.75, 4.25, 7.875],
 			"to": [4.875, 4.5, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3928,7 +3928,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_285",
+			"name": "sword_285",
 			"from": [8, 1, 7.8125],
 			"to": [8.125, 1.5, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3942,7 +3942,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_286",
+			"name": "sword_286",
 			"from": [10.75, 4.375, 7.875],
 			"to": [11.375, 4.5, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3956,7 +3956,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_287",
+			"name": "sword_287",
 			"from": [4.625, 4.25, 7.875],
 			"to": [4.75, 4.375, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3970,7 +3970,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_288",
+			"name": "sword_288",
 			"from": [11.125, 4.25, 7.875],
 			"to": [11.5, 4.375, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3984,7 +3984,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_289",
+			"name": "sword_289",
 			"from": [7.875, 0.75, 7.8125],
 			"to": [8, 1.25, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -3998,7 +3998,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_290",
+			"name": "sword_290",
 			"from": [8.125, 0.75, 7.8125],
 			"to": [8.25, 1.25, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -4012,7 +4012,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_291",
+			"name": "sword_291",
 			"from": [8, -0.5, 7.75],
 			"to": [8.125, 1, 8.25],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -4026,7 +4026,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_292",
+			"name": "sword_292",
 			"from": [7.875, -0.375, 7.75],
 			"to": [8, 0.75, 8.25],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -4040,7 +4040,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_293",
+			"name": "sword_293",
 			"from": [8.125, -0.375, 7.75],
 			"to": [8.25, 0.75, 8.25],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -4054,7 +4054,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_294",
+			"name": "sword_294",
 			"from": [7.75, 0.625, 7.8125],
 			"to": [7.875, 0.75, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -4068,7 +4068,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_295",
+			"name": "sword_295",
 			"from": [8.25, 0.625, 7.8125],
 			"to": [8.375, 0.75, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -4082,7 +4082,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_296",
+			"name": "sword_296",
 			"from": [7.75, -0.25, 7.75],
 			"to": [7.875, 0.625, 8.25],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -4096,7 +4096,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_297",
+			"name": "sword_297",
 			"from": [8.25, -0.25, 7.75],
 			"to": [8.375, 0.625, 8.25],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -4110,7 +4110,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_298",
+			"name": "sword_298",
 			"from": [7.625, -0.375, 7.9375],
 			"to": [7.75, 0.375, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -4124,7 +4124,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_299",
+			"name": "sword_299",
 			"from": [8.375, -0.375, 7.9375],
 			"to": [8.5, 0.375, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -4138,7 +4138,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_300",
+			"name": "sword_300",
 			"from": [7.5, 0, 7.9375],
 			"to": [7.625, 0.25, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -4152,7 +4152,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_301",
+			"name": "sword_301",
 			"from": [8.5, 0, 7.9375],
 			"to": [8.625, 0.25, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -4166,7 +4166,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_302",
+			"name": "sword_302",
 			"from": [7.375, 0, 7.9375],
 			"to": [7.5, 0.125, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -4180,7 +4180,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_303",
+			"name": "sword_303",
 			"from": [8.625, 0, 7.9375],
 			"to": [8.75, 0.125, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -4194,7 +4194,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_304",
+			"name": "sword_304",
 			"from": [7.5, -0.5, 7.9375],
 			"to": [7.625, -0.125, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -4208,7 +4208,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_305",
+			"name": "sword_305",
 			"from": [8.5, -0.5, 7.9375],
 			"to": [8.625, -0.125, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -4222,7 +4222,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_306",
+			"name": "sword_306",
 			"from": [7.375, -0.5, 7.9375],
 			"to": [7.5, -0.25, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -4236,7 +4236,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_307",
+			"name": "sword_307",
 			"from": [8.625, -0.5, 7.9375],
 			"to": [8.75, -0.25, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -4250,7 +4250,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_308",
+			"name": "sword_308",
 			"from": [7.875, -0.875, 7.875],
 			"to": [8, -0.375, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -4264,7 +4264,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_309",
+			"name": "sword_309",
 			"from": [8.125, -0.875, 7.875],
 			"to": [8.25, -0.375, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -4278,7 +4278,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_310",
+			"name": "sword_310",
 			"from": [7.25, -0.5, 7.9375],
 			"to": [7.375, -0.375, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -4292,7 +4292,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_311",
+			"name": "sword_311",
 			"from": [8.75, -0.5, 7.9375],
 			"to": [8.875, -0.375, 8.0625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -4306,7 +4306,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_312",
+			"name": "sword_312",
 			"from": [8, -1.125, 7.875],
 			"to": [8.125, -0.5, 8.125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -4320,7 +4320,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_163",
+			"name": "sword_163",
 			"from": [9.375, 5.5, 7.8125],
 			"to": [10.625, 5.625, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -4334,7 +4334,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_207",
+			"name": "sword_207",
 			"from": [9, 5.5, 7.6875],
 			"to": [9.375, 5.625, 8.3125],
 			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 7.9375]},
@@ -4348,7 +4348,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_161",
+			"name": "sword_161",
 			"from": [7.875, 1.25, 7.8125],
 			"to": [8, 4.625, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [3.9375, 0, 1.0625]},
@@ -4362,7 +4362,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_162",
+			"name": "sword_162",
 			"from": [8.125, 1.25, 7.8125],
 			"to": [8.25, 4.625, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [3.9375, 0, 1.0625]},
@@ -4376,7 +4376,7 @@
 			}
 		},
 		{
-			"name": "heavenly_partisan_169",
+			"name": "sword_169",
 			"from": [8, 1.5, 7.8125],
 			"to": [8.125, 4.5, 8.1875],
 			"rotation": {"angle": 0, "axis": "y", "origin": [3.9375, 0, 1.0625]},
@@ -4750,14 +4750,14 @@
 			]
 		},
 		{
-			"name": "heavenly_partisan",
+			"name": "sword",
 			"origin": [8, 8, 8],
 			"scope": 0,
 			"color": 0,
 			"children": [308, 309]
 		},
 		{
-			"name": "heavenly_partisan",
+			"name": "sword",
 			"origin": [8, 8, 8],
 			"scope": 0,
 			"color": 0,

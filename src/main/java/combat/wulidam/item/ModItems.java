@@ -17,6 +17,10 @@ import java.util.function.Function;
  */
 public class ModItems {
 
+    public static final Item HEAVY_SWORD = register("heavysword",
+            HeavyswordItem::new,
+            new Item.Settings().sword(ToolMaterial.IRON, 14, -3.4f));
+
     public static final Item SWORD = register("sword",
             SwordItem::new,
             new Item.Settings().sword(ToolMaterial.IRON, 5, -2.4f));
@@ -84,6 +88,7 @@ public class ModItems {
             entries.add(GREATBOW);
             entries.add(SWORD);
             entries.add(SHIELD);
+            entries.add(HEAVY_SWORD);
         });
     }
 }

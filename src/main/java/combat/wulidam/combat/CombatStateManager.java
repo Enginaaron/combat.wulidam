@@ -1,6 +1,7 @@
 package combat.wulidam.combat;
 
 import combat.wulidam.SoulsLikeCombat;
+import combat.wulidam.item.HeavyswordItem;
 import combat.wulidam.item.SoulsWeaponItem;
 import combat.wulidam.network.s2c.CombatStateS2CPayload;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
@@ -93,7 +94,12 @@ public class CombatStateManager {
                 data.setState(CombatState.ATTACKING, activeTicks);
             }
             case ATTACKING -> {
-                data.setState(CombatState.RECOVERY, weaponData.recoveryTicks());
+                int recovery = weaponData.recoveryTicks();
+                // extra recovery for heavy sword to emphasize sluggish follow-through
+                if (weaponData.id().equals(HeavyswordItem.WEAPON_DATA_ID)) {
+                    recovery += 6;
+                }
+                data.setState(CombatState.RECOVERY, recovery);
             }
             case RECOVERY -> {
                 data.setLastRecoveryEndTick(currentTick);
@@ -113,7 +119,8 @@ public class CombatStateManager {
             }
             case DODGING -> {
                 data.setState(CombatState.IDLE, 0);
-                data.setDodgeCooldownRemaining(100); // 5 seconds at 20 tps
+                // Use weapon-configured dodge cooldown so different weapons can tune spamability
+                data.setDodgeCooldownRemaining(weaponData.dodgeCooldownTicks());
                 data.setComboIndex(0);
             }
             case STUNNED -> {
@@ -157,6 +164,14 @@ public class CombatStateManager {
 
         // start attack at WIND_UP. real hit check happens later in ATTACKING
         int windUp = weaponData.getWindUpForCombo(data.getComboIndex());
+        // Special-case heavysword: larger wind-up and movement inertia (no stamina cost)
+        if (weaponData.id().equals(HeavyswordItem.WEAPON_DATA_ID)) {
+            windUp += 4; // additional wind-up for weight
+            // brief movement slowdown to convey heft
+            player.setVelocity(player.getVelocity().multiply(0.2, 1.0, 0.2));
+            player.setSprinting(false);
+            player.velocityDirty = true;
+        }
         data.setState(CombatState.WIND_UP, windUp);
         syncStateToClient(player, data);
 

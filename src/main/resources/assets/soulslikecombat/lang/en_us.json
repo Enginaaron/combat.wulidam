@@ -2,10 +2,11 @@
     "item.soulslikecombat.sword_and_shield": "Sword and Shield",
     "item.soulslikecombat.dagger": "Dagger",
     "item.soulslikecombat.scythe": "Scythe",
-    "item.soulslikecombat.longsword": "Longsword",
+    "item.soulslikecombat.longsword": "Long Sword",
     "item.soulslikecombat.shield": "Shield",
     "item.soulslikecombat.sword": "Sword",
     "item.soulslikecombat.greatbow": "Greatbow",
+    "item.soulslikecombat.heavysword": "Heavy Sword",
 
     "tooltip.soulslikecombat.combat_stats": "⚔ Combat Stats",
     "tooltip.soulslikecombat.damage": "  Damage: %s",
