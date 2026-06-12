@@ -7,9 +7,7 @@
 		"LivingEntityDamageMixin"
 	],
 	"client": [
-		"MinecraftClientAttackMixin",
-		"GameRendererCameraMixin",
-		"WorldRendererCameraMixin"
+		"MinecraftClientAttackMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

@@ -110,58 +110,6 @@ public class SoulsLikeCombatClient implements ClientModInitializer {
         HudRenderCallback.EVENT.register(new StaminaHudRenderer());
         HudRenderCallback.EVENT.register(new combat.wulidam.client.PostureHudRenderer());
 
-        // Init camera controller
-        combat.wulidam.client.CameraController.init(null);
-
-        // keybinds for rotating third-person camera left/right
-        KeyBinding camLeft = KeyBindingHelper.registerKeyBinding(new KeyBinding(
-                "key.soulslikecombat.cam_left",
-                InputUtil.Type.KEYSYM,
-                GLFW.GLFW_KEY_LEFT,
-                KeyBinding.Category.MISC
-        ));
-        KeyBinding camRight = KeyBindingHelper.registerKeyBinding(new KeyBinding(
-                "key.soulslikecombat.cam_right",
-                InputUtil.Type.KEYSYM,
-                GLFW.GLFW_KEY_RIGHT,
-                KeyBinding.Category.MISC
-        ));
-
-        // Camera rotation per tick while key held (degrees per tick)
-        final double rotationPerTick = 2.5; // ~50 deg/sec at 20 tps
-
-        // Toggle shoulder side keybind
-        KeyBinding camToggleSide = KeyBindingHelper.registerKeyBinding(new KeyBinding(
-                "key.soulslikecombat.cam_toggle_side",
-                InputUtil.Type.KEYSYM,
-                GLFW.GLFW_KEY_G,
-                KeyBinding.Category.MISC
-        ));
-
-        // extend existing client tick handler to react to camera keys
-        ClientTickEvents.END_CLIENT_TICK.register(client -> {
-            if (client.player == null) return;
-
-            // rotate camera while arrow keys held (only in third-person)
-            try {
-                if (combat.wulidam.client.CameraController.isThirdPerson(client)) {
-                    if (camLeft.isPressed()) {
-                        combat.wulidam.client.CameraController.rotateOrbitYaw(-rotationPerTick);
-                        SoulsLikeCombat.LOGGER.debug("CamLeft held: rotating {} deg", -rotationPerTick);
-                    }
-                    if (camRight.isPressed()) {
-                        combat.wulidam.client.CameraController.rotateOrbitYaw(rotationPerTick);
-                        SoulsLikeCombat.LOGGER.debug("CamRight held: rotating {} deg", rotationPerTick);
-                    }
-                    // toggle side when camToggleSide pressed
-                    while (camToggleSide.wasPressed()) {
-                        combat.wulidam.client.CameraController.toggleShoulderSide();
-                        SoulsLikeCombat.LOGGER.debug("Cam toggle shoulder side pressed. Now right? {}", combat.wulidam.client.CameraController.isShoulderRight());
-                    }
-                }
-            } catch (Throwable ignored) {}
-        });
-
         // Client-side state to detect hotbar selection changes
         final int[] prevSelectedSlot = new int[] { -1 };
         final int[] splitCooldown = new int[] { 0 };
@@ -298,17 +246,6 @@ public class SoulsLikeCombatClient implements ClientModInitializer {
                 // Phase 3 will use this to trigger screen effects
                 SoulsLikeCombat.LOGGER.debug("Client received hit result: type={}, damage={}",
                         payload.hitType(), payload.damageDealt());
-
-                // Trigger camera shake based on hit type
-                switch (payload.hitType()) {
-                    case combat.wulidam.network.s2c.HitResultS2CPayload.HIT_NORMAL ->
-                        combat.wulidam.client.CameraController.startShake(0.18, 2.2, 10);
-                    case combat.wulidam.network.s2c.HitResultS2CPayload.HIT_INTERRUPTED ->
-                        combat.wulidam.client.CameraController.startShake(0.28, 3.2, 14);
-                    case combat.wulidam.network.s2c.HitResultS2CPayload.HIT_PARRIED ->
-                        combat.wulidam.client.CameraController.startShake(0.12, 1.2, 8);
-                    default -> combat.wulidam.client.CameraController.startShake(0.10, 0.8, 6);
-                }
             });
         });
 
