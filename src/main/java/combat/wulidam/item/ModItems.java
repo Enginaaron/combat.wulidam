@@ -19,43 +19,43 @@ public class ModItems {
 
     public static final Item HEAVY_SWORD = register("heavysword",
             HeavyswordItem::new,
-            new Item.Settings().sword(ToolMaterial.IRON, 14, -3.4f));
+            new Item.Settings().sword(ToolMaterial.IRON, 15, -3.7f));
 
     public static final Item SWORD = register("sword",
             SwordItem::new,
-            new Item.Settings().sword(ToolMaterial.IRON, 5, -2.4f));
+            new Item.Settings().sword(ToolMaterial.IRON, 8, -2.4f));
 
     public static final Item SHIELD = register("shield",
             ShieldItem::new,
-            new Item.Settings().sword(ToolMaterial.IRON, 5, -2.4f));
+            new Item.Settings().sword(ToolMaterial.IRON, 3, -2.4f));
 
     /**
      * Sword and Shield: Medium speed, medium damage, easier parry.
      */
     public static final Item SWORD_AND_SHIELD = register("sword_and_shield",
             SwordAndShieldItem::new,
-            new Item.Settings().sword(ToolMaterial.IRON, 5, -2.4f));
+            new Item.Settings().sword(ToolMaterial.IRON, 3, -2.4f));
 
     /**
      * Dagger: Fast speed, low damage, very short range.
      */
     public static final Item DAGGER = register("dagger",
             DaggerItem::new,
-            new Item.Settings().sword(ToolMaterial.IRON, 2, -1.5f));
+            new Item.Settings().sword(ToolMaterial.IRON, 3, -1.5f));
 
     /**
      * Scythe: Slow speed, high damage, long range.
      */
     public static final Item SCYTHE = register("scythe",
             ScytheItem::new,
-            new Item.Settings().sword(ToolMaterial.IRON, 7, -3.0f));
+            new Item.Settings().sword(ToolMaterial.IRON, 6, -3.0f));
 
     /**
      * Longsword: Very slow, very high damage, heavy lag.
      */
     public static final Item LONGSWORD = register("longsword",
             LongswordItem::new,
-            new Item.Settings().sword(ToolMaterial.IRON, 9, -3.2f));
+            new Item.Settings().sword(ToolMaterial.IRON, 8, -3.2f));
 
     /**
      * Greatbow: Slower draw, higher arrow velocity. Uses normal arrows.
