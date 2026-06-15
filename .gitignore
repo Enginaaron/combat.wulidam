@@ -21,7 +21,7 @@ usercache.json
 command_history.txt
 downloads/
 config/fabric/indigo-renderer.properties
-data/
+/data/
 mods/
 run/
 .output.txt
