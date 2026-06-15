@@ -9,6 +9,10 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.Vec3d;
+import combat.wulidam.sound.ModSounds;
+import net.minecraft.particle.ParticleTypes;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -61,6 +65,11 @@ public class LivingEntityDamageMixin {
                             ParryHandler.resolveSuccessfulParry(attacker, player, weaponData);
                             PostureHandler.onParry(player, data);
 
+                            // Parry feedback
+                            world.playSound(null, player.getX(), player.getY(), player.getZ(), ModSounds.PARRY_SUCCESS, SoundCategory.PLAYERS, 1.0f, 1.0f);
+                            world.spawnParticles(ParticleTypes.CRIT, attacker.getX(), attacker.getY() + 1.0, attacker.getZ(), 10, 0.2, 0.2, 0.2, 0.1);
+                            world.spawnParticles(ParticleTypes.ENCHANTED_HIT, attacker.getX(), attacker.getY() + 1.0, attacker.getZ(), 10, 0.2, 0.2, 0.2, 0.1);
+
                             if (attacker instanceof ServerPlayerEntity attackerPlayer) {
                                 PlayerCombatData attackerData = CombatStateManager.get(attackerPlayer.getUuid());
                                 if (attackerData != null) {
@@ -91,6 +100,11 @@ public class LivingEntityDamageMixin {
                         } else {
                             data.setStamina(data.getStamina() - staminaCost);
                         }
+
+                        // Block feedback
+                        world.playSound(null, player.getX(), player.getY(), player.getZ(), ModSounds.BLOCK, SoundCategory.PLAYERS, 1.0f, 1.0f);
+                        world.spawnParticles(ParticleTypes.ELECTRIC_SPARK, player.getX(), player.getY() + 1.0, player.getZ(), 5, 0.2, 0.2, 0.2, 0.1);
+
                         CombatStateManager.syncStateToClient(player, data);
                         cir.setReturnValue(false);
                         return;

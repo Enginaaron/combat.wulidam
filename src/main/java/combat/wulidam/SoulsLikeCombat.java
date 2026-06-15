@@ -28,6 +28,9 @@ public class SoulsLikeCombat implements ModInitializer {
 		// Register custom weapon items and creative tab entries
 		ModItems.initialize();
 
+		// Register sounds
+		combat.wulidam.sound.ModSounds.initialize();
+
 		// Register weapon data resource reload listener
 		WeaponRegistry.register();
 
