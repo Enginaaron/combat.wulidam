@@ -12,7 +12,7 @@ public class VentHandler {
     public static final float STAMINA_COST = 30.0f;
     public static final int COOLDOWN = 200; // 10 seconds
     public static final double RADIUS = 5.0;
-    public static final double KNOCKBACK_STRENGTH = 2.0;
+    public static final double KNOCKBACK_STRENGTH = 1.0;
 
     public static void executeVent(ServerPlayerEntity player) {
         PlayerCombatData data = CombatStateManager.getOrCreate(player);
@@ -30,9 +30,10 @@ public class VentHandler {
             if (entity instanceof LivingEntity target && player.squaredDistanceTo(target) <= RADIUS * RADIUS) {
                 Vec3d knockbackDir = new Vec3d(target.getX() - player.getX(), target.getY() - player.getY(), target.getZ() - player.getZ()).normalize();
                 if (knockbackDir.lengthSquared() < 0.01) {
-                    knockbackDir = new Vec3d(0, 0.1, 0);
+                    knockbackDir = new Vec3d(0, 1.0, 0);
                 }
-                target.takeKnockback(KNOCKBACK_STRENGTH, -knockbackDir.x, -knockbackDir.z);
+                target.setVelocity(target.getVelocity().add(knockbackDir.x * KNOCKBACK_STRENGTH, 0.4, knockbackDir.z * KNOCKBACK_STRENGTH));
+                target.velocityDirty = true;
             }
         }
 
