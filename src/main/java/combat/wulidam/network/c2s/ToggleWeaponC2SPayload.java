@@ -10,6 +10,7 @@ import net.minecraft.util.Identifier;
  * Client-to-server payload sent when the player presses the toggle-weapon keybind.
  * Empty payload: server derives everything from the player's current state.
  */
+// packet for splitting the sword and shield item
 public record ToggleWeaponC2SPayload() implements CustomPayload {
 
     public static final Id<ToggleWeaponC2SPayload> ID =

@@ -12,6 +12,7 @@ import net.minecraft.util.math.Vec3d;
  * Includes the intended movement direction (WASD-relative) so the server
  * can apply dodge velocity in the correct direction.
  */
+// packet that sends where the player wants to dodge
 public record DodgeC2SPayload(double dirX, double dirY, double dirZ) implements CustomPayload {
 
     public static final Id<DodgeC2SPayload> ID =

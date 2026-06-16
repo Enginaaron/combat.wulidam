@@ -1,0 +1,28 @@
+{
+  "parry_success": {
+    "sounds": [
+      "minecraft:entity.player.attack.crit",
+      "minecraft:block.anvil.land"
+    ],
+    "subtitle": "soulslikecombat.subtitle.parry_success"
+  },
+  "posture_break": {
+    "sounds": [
+      "minecraft:entity.shield.break",
+      "minecraft:entity.iron_golem.damage"
+    ],
+    "subtitle": "soulslikecombat.subtitle.posture_break"
+  },
+  "dodge": {
+    "sounds": [
+      "minecraft:entity.player.attack.sweep"
+    ],
+    "subtitle": "soulslikecombat.subtitle.dodge"
+  },
+  "block": {
+    "sounds": [
+      "minecraft:entity.shield.block"
+    ],
+    "subtitle": "soulslikecombat.subtitle.block"
+  }
+}

@@ -24,6 +24,7 @@ import java.util.UUID;
  * Registers all custom payload types (C2S and S2C) and their server-side receivers.
  * Payload type registration must happen before receiver registration.
  */
+// wires up all the packets so client and server can talk
 public class ModPayloads {
 
     // packet ids/codecs only - no logic here, just wiring to fabric registry

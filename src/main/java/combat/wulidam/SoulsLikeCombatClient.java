@@ -28,6 +28,7 @@ import org.lwjgl.glfw.GLFW;
  * Client-side mod initializer. Registers S2C packet receivers,
  * keybinds (Phase 3), HUD overlays (Phase 3), and animation handlers (Phase 4).
  */
+// this is the client side starter, like keybinds hud and client packets
 public class SoulsLikeCombatClient implements ClientModInitializer {
     private static final double TELEPORT_DODGE_DISTANCE = 2.0; // blocks
 
@@ -240,10 +241,31 @@ public class SoulsLikeCombatClient implements ClientModInitializer {
             });
         });
 
-        // Hit result — trigger client effects (screen shake, flash, sounds)
+                // Hit result — trigger client effects (screen shake, flash, sounds)
         ClientPlayNetworking.registerGlobalReceiver(HitResultS2CPayload.ID, (payload, context) -> {
             context.client().execute(() -> {
-                // Phase 3 will use this to trigger screen effects
+                MinecraftClient client = context.client();
+                if (client.player == null) return;
+
+                boolean isTarget = payload.targetUuid().equals(client.player.getUuid());
+                boolean isAttacker = payload.attackerUuid().equals(client.player.getUuid());
+
+                if (isTarget) {
+                    if (payload.hitType() == HitResultS2CPayload.HIT_PARRIED) {
+                        // We were parried by someone else!
+                        // Maybe a specific effect here?
+                    } else if (payload.hitType() == HitResultS2CPayload.HIT_NORMAL || payload.hitType() == HitResultS2CPayload.HIT_INTERRUPTED) {
+                        // We were hit
+                        // Removed showFloatingItem as it triggers an unwanted sound
+                    }
+                }
+
+                if (isAttacker) {
+                    if (payload.hitType() == HitResultS2CPayload.HIT_PARRIED) {
+                        // Our attack was parried!
+                    }
+                }
+
                 SoulsLikeCombat.LOGGER.debug("Client received hit result: type={}, damage={}",
                         payload.hitType(), payload.damageDealt());
             });

@@ -1,7 +1,11 @@
 package combat.wulidam.combat;
 
+import combat.wulidam.sound.ModSounds;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.sound.SoundCategory;
 
+// handles posture going down and breaking the player
 public class PostureHandler {
     public static final float PARRY_REGAIN = 0.20f;
     public static final float DODGE_REGAIN = 0.10f;
@@ -36,6 +40,13 @@ public class PostureHandler {
         if (data.getPosture() <= 0 && data.getPostureImmunityTicks() == 0) {
             data.setState(CombatState.STUNNED, STUN_DURATION);
             data.setPostureImmunityTicks(IMMUNITY_DURATION);
+
+            // Posture break feedback
+            player.getEntityWorld().playSound(null, player.getX(), player.getY(), player.getZ(), ModSounds.POSTURE_BREAK, SoundCategory.PLAYERS, 1.0f, 1.0f);
+            if (player.getEntityWorld() instanceof net.minecraft.server.world.ServerWorld serverWorld) {
+                serverWorld.spawnParticles(ParticleTypes.ANGRY_VILLAGER, player.getX(), player.getY() + 1.5, player.getZ(), 10, 0.3, 0.3, 0.3, 0.1);
+            }
+
             CombatStateManager.syncStateToClient(player, data);
         }
     }

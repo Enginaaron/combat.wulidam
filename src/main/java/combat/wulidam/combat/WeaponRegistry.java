@@ -24,6 +24,7 @@ import java.util.*;
  * This is a server-side registry. Data is synced to clients via
  * WeaponDataSyncS2CPayload in Phase 2.
  */
+// loads weapon stats from json and lets other code grab them
 public class WeaponRegistry {
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
     private static final String DATA_PATH = "weapon_data";

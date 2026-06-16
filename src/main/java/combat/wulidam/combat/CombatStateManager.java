@@ -4,6 +4,7 @@ import combat.wulidam.SoulsLikeCombat;
 import combat.wulidam.item.HeavyswordItem;
 import combat.wulidam.item.SoulsWeaponItem;
 import combat.wulidam.network.s2c.CombatStateS2CPayload;
+import combat.wulidam.sound.ModSounds;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
@@ -11,6 +12,7 @@ import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundCategory;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -22,6 +24,7 @@ import java.util.WeakHashMap;
  * Maintains a PlayerCombatData instance for every player engaged in souls-like combat.
  * All state transitions and validations happen here.
  */
+// runs the combat state machine, basically the brain of fighting
 public class CombatStateManager {
     private static final Map<UUID, PlayerCombatData> PLAYER_DATA = new HashMap<>();
     private static final Map<MobEntity, Integer> MOB_STUN_TICKS = new WeakHashMap<>();
@@ -219,6 +222,10 @@ public class CombatStateManager {
         data.setStamina(data.getStamina() - dodgeCost);
         data.setState(CombatState.DODGING, weaponData.dodgeTicks());
         data.setComboIndex(0);
+
+        // Dodge feedback
+        player.getEntityWorld().playSound(null, player.getX(), player.getY(), player.getZ(), ModSounds.DODGE, SoundCategory.PLAYERS, 0.6f, 1.2f);
+
         syncStateToClient(player, data);
         return true;
     }

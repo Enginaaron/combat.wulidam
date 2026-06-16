@@ -11,6 +11,7 @@ import net.minecraft.util.math.Vec3d;
  * Client-to-server payload for teleport-dodge requests. Contains a small offset
  * vector (usually horizontal) that the server will apply to the player's position.
  */
+// packet for blink dodging a small distance
 public record TeleportDodgeC2SPayload(double dirX, double dirY, double dirZ) implements CustomPayload {
 
     public static final Id<TeleportDodgeC2SPayload> ID =

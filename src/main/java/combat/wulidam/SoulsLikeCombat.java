@@ -9,6 +9,7 @@ import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+// this is the main mod starter, it loads all the server stuff
 public class SoulsLikeCombat implements ModInitializer {
 	public static final String MOD_ID = "soulslikecombat";
 
@@ -27,6 +28,9 @@ public class SoulsLikeCombat implements ModInitializer {
 
 		// Register custom weapon items and creative tab entries
 		ModItems.initialize();
+
+		// Register sounds
+		combat.wulidam.sound.ModSounds.initialize();
 
 		// Register weapon data resource reload listener
 		WeaponRegistry.register();

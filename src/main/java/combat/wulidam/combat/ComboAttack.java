@@ -4,6 +4,7 @@ package combat.wulidam.combat;
  * Per-attack overrides within a combo chain.
  * Each step in a weapon's combo can have different damage, range, and timing.
  */
+// one hit in a combo, with its own damage range and timing stuff
 public record ComboAttack(
         /** Multiplier applied to the weapon's base damage for this combo step. */
         float damageMultiplier,

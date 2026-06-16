@@ -15,6 +15,7 @@ import java.util.function.Function;
 /**
  * Registers all souls-like combat weapon items and adds them to a creative tab called "Combat"
  */
+// registers every custom weapon item for the mod
 public class ModItems {
 
     public static final Item HEAVY_SWORD = register("heavysword",

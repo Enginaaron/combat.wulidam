@@ -12,5 +12,9 @@
     "tooltip.soulslikecombat.damage": "  Damage: %s",
     "tooltip.soulslikecombat.range": "  Range: %s blocks",
     "tooltip.soulslikecombat.combo": "  Combo Chain: %s hits",
-    "tooltip.soulslikecombat.parry_window": "  Parry Window: %s ticks"
+    "tooltip.soulslikecombat.parry_window": "  Parry Window: %s ticks",
+    "soulslikecombat.subtitle.parry_success": "Parry successful",
+    "soulslikecombat.subtitle.posture_break": "Posture broken",
+    "soulslikecombat.subtitle.dodge": "Dodge",
+    "soulslikecombat.subtitle.block": "Attack blocked"
 }

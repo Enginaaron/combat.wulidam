@@ -11,6 +11,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(MinecraftClient.class)
+// stops client clicks when the custom combat state says no
 public class MinecraftClientAttackMixin {
 
     // stop click before vanilla sends attack packet/swing when souls state says "not ready"

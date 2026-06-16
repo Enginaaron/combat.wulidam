@@ -10,6 +10,7 @@ import net.minecraft.util.Identifier;
  * Client-to-server payload sent when the player presses the attack keybind.
  * Contains no data — the server derives everything from the player's current state.
  */
+// packet that says the client wants to attack
 public record AttackC2SPayload() implements CustomPayload {
 
     public static final Id<AttackC2SPayload> ID =

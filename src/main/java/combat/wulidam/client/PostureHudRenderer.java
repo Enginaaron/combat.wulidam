@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.render.RenderTickCounter;
 
+// draws the yellow posture bar on the screen
 public class PostureHudRenderer implements HudRenderCallback {
     private static final int BAR_WIDTH = 100;
     private static final int BAR_HEIGHT = 5;

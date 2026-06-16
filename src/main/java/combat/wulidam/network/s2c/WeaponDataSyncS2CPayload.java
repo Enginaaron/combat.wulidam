@@ -16,6 +16,7 @@ import java.util.List;
  * Sent when a player joins so the client has weapon stats for tooltips,
  * HUD display, and animation timing.
  */
+// sends all weapon stats to client so tooltips and hud know stuff
 public record WeaponDataSyncS2CPayload(List<WeaponDataEntry> entries) implements CustomPayload {
 
     public static final Id<WeaponDataSyncS2CPayload> ID =
@@ -148,6 +149,7 @@ public record WeaponDataSyncS2CPayload(List<WeaponDataEntry> entries) implements
     /**
      * Flat data carrier mirroring all WeaponData fields for network serialization.
      */
+    // one weapon stat blob inside the big sync packet
     public record WeaponDataEntry(
             Identifier id,
             float baseDamage,
