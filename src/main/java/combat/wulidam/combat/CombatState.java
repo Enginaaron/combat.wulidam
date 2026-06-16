@@ -5,6 +5,7 @@ package combat.wulidam.combat;
  * The combat system is a state machine — players transition between these states
  * based on their inputs and interactions with other entities.
  */
+// all the combat moods the player can be in
 public enum CombatState {
     /** Default state, player can initiate any action here (attack, parry, dodge). */
     IDLE,

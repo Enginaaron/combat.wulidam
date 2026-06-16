@@ -5,6 +5,7 @@ import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.sound.SoundCategory;
 
+// handles posture going down and breaking the player
 public class PostureHandler {
     public static final float PARRY_REGAIN = 0.20f;
     public static final float DODGE_REGAIN = 0.10f;

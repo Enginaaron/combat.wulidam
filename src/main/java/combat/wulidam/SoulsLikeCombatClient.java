@@ -28,6 +28,7 @@ import org.lwjgl.glfw.GLFW;
  * Client-side mod initializer. Registers S2C packet receivers,
  * keybinds (Phase 3), HUD overlays (Phase 3), and animation handlers (Phase 4).
  */
+// this is the client side starter, like keybinds hud and client packets
 public class SoulsLikeCombatClient implements ClientModInitializer {
     private static final double TELEPORT_DODGE_DISTANCE = 2.0; // blocks
 

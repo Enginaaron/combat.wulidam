@@ -19,6 +19,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
  * from interfering with the souls-like combat system.
  */
 @Mixin(PlayerEntity.class)
+// blocks vanilla attacking so our custom combat handles it
 public class PlayerAttackMixin {
 
     // hard cancel vanilla melee path for souls weapons so only custom state machine decides timing / its

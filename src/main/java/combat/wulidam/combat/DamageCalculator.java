@@ -12,6 +12,7 @@ import net.minecraft.util.math.Vec3d;
 /**
  * Computes and applies final damage, knockback, and hit stun.
  */
+// does damage numbers and knockback after a hit lands
 public class DamageCalculator {
 
     public static void applyDamage(ServerPlayerEntity attacker, LivingEntity target,

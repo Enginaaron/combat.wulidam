@@ -12,6 +12,7 @@ import net.minecraft.item.ItemStack;
  * after splitting; reassembly occurs only when the player's current main
  * hand ItemStack reference differs (i.e., they switched hotbar slot).
  */
+// remembers who split the sword and shield so it can be put back
 public final class SplitTracker {
     // Map of player UUID -> the ItemStack object reference present in main hand after split
     private static final Map<UUID, ItemStack> SAVED_STACK = new ConcurrentHashMap<>();

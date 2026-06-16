@@ -12,6 +12,7 @@ import net.minecraft.util.Identifier;
  * Sent whenever the player's CombatState changes so the client HUD
  * and animation manager can react.
  */
+// server sends this so the client knows hp-ish bars and combat state
 public record CombatStateS2CPayload(
         int stateOrdinal,
         int stateTicksRemaining,

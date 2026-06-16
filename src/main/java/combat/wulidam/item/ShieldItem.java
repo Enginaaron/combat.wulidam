@@ -14,6 +14,7 @@ import net.minecraft.world.World;
 /**
  * Sword and Shield: a single combined item (offhand disabled for the mod).
  */
+// shield item, lets the player hold block with it
 public class ShieldItem extends SoulsWeaponItem {
     public static final Identifier WEAPON_DATA_ID =
             Identifier.of(SoulsLikeCombat.MOD_ID, "shield");

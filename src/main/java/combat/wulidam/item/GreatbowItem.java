@@ -8,6 +8,7 @@ import net.minecraft.util.math.MathHelper;
 import org.jetbrains.annotations.Nullable;
 
 // greatbow reuses the normal bow model/texture, we just remap draw timing so it still looks right
+// big bow item, slower to pull but shoots harder
 public class GreatbowItem extends BowItem {
     private static final int DRAW_DURATION_TICKS = 45; // slower draw than vanilla bow
     private static final float VELOCITY_MULTIPLIER = 1.75f; // more velocity = more arrow damage

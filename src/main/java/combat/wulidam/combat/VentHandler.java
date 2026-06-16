@@ -8,6 +8,7 @@ import net.minecraft.util.math.Vec3d;
 
 import java.util.List;
 
+// makes the vent move that spends stamina and pushes enemies away
 public class VentHandler {
     public static final float STAMINA_COST = 30.0f;
     public static final int COOLDOWN = 200; // 10 seconds

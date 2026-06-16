@@ -6,6 +6,7 @@ import net.minecraft.util.math.Vec3d;
 /**
  * Handles dodge execution — applies movement velocity and manages i-frames.
  */
+// pushes the player for a normal dodge
 public class DodgeHandler {
 
     public static void executeDodge(ServerPlayerEntity player, Vec3d direction) {

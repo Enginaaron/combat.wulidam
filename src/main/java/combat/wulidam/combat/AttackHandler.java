@@ -19,6 +19,7 @@ import java.util.List;
  * Performs server-side hit detection via area sweep, checks target combat state,
  * and delegates to DamageCalculator.
  */
+// handles the actual hit checking when an attack is active
 public class AttackHandler {
 
     // runs during ATTACKING frames only. finds one target and resolves one hit per attack phase

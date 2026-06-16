@@ -16,6 +16,7 @@ import java.util.function.Consumer;
  * Sword settings: durability, enchantability, attack attributes, weapon component
  * are applied via ToolMaterial.applySwordSettings() in the Settings passed to the constructor.
  */
+// base weapon class, all the custom melee weapons use this
 public class SoulsWeaponItem extends Item {
     private final Identifier weaponDataId;
 

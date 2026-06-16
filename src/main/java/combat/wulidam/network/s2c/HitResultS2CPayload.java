@@ -18,6 +18,7 @@ import java.util.UUID;
  *   2 = dodged (attack missed due to i-frames)
  *   3 = interrupted (target was mid-attack)
  */
+// server sends this after a hit so client can show effects
 public record HitResultS2CPayload(
         UUID attackerUuid,
         UUID targetUuid,

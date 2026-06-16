@@ -24,6 +24,7 @@ import java.util.WeakHashMap;
  * Maintains a PlayerCombatData instance for every player engaged in souls-like combat.
  * All state transitions and validations happen here.
  */
+// runs the combat state machine, basically the brain of fighting
 public class CombatStateManager {
     private static final Map<UUID, PlayerCombatData> PLAYER_DATA = new HashMap<>();
     private static final Map<MobEntity, Integer> MOB_STUN_TICKS = new WeakHashMap<>();

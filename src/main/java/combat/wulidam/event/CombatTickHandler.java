@@ -19,6 +19,7 @@ import net.minecraft.util.Hand;
  * Each tick, this updates every player's combat state machine and
  * processes active attack frames.
  */
+// runs every server tick and updates combat stuff
 public class CombatTickHandler {
 
     /**

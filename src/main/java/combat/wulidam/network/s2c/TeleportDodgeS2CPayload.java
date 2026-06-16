@@ -10,6 +10,7 @@ import net.minecraft.util.Identifier;
  * Server-to-client notification that the server executed a teleport-dodge.
  * Client-side can use this to play animations/effects. Empty payload for now.
  */
+// server tells client if the teleport dodge worked or bonked
 public record TeleportDodgeS2CPayload(boolean bumped) implements CustomPayload {
 
     public static final Id<TeleportDodgeS2CPayload> ID =

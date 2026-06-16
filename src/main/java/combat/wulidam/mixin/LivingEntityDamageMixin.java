@@ -25,6 +25,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
  * when a player is in the PARRYING state, incoming attacks from the front are parried.
  */
 @Mixin(LivingEntity.class)
+// sneaks into damage code so dodge parry shield and posture can work
 public class LivingEntityDamageMixin {
 
     @Inject(

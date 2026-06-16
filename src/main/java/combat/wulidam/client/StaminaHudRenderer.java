@@ -6,6 +6,7 @@ import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.RenderTickCounter;
 
+// draws the blue stamina bar on the screen
 public class StaminaHudRenderer implements HudRenderCallback {
 
     private static final int BAR_WIDTH = 100;

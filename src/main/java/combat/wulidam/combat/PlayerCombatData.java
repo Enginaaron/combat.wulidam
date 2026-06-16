@@ -8,6 +8,7 @@ import java.util.UUID;
  * Per-player combat state tracking. One instance per player is maintained
  * by the CombatStateManager on the server side.
  */
+// all the combat info one player needs saved on server
 public class PlayerCombatData {
     private final UUID playerUuid;
 

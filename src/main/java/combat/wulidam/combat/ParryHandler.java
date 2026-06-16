@@ -7,6 +7,7 @@ import net.minecraft.server.network.ServerPlayerEntity;
  * Handles parry resolution — both successful and failed parries.
  * code that is commented out is the parry knockback if we ever decide to restore that
  */
+// deals with what happens when someone actually parries
 public class ParryHandler {
 
     private static final int PARRY_SUCCESS_REWARD_TICKS = 10;

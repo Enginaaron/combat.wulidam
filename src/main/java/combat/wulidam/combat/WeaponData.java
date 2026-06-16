@@ -9,6 +9,7 @@ import java.util.List;
  * This is the single source of truth for weapon behavior — change a JSON file
  * and the weapon's feel changes without recompiling.
  */
+// stores all the stats for one weapon from the json files
 public record WeaponData(
         /** Unique identifier for this weapon data (e.g. soulslikecombat:longsword). */
         Identifier id,
